@@ -11,7 +11,60 @@
 .navbar-fixed-top .navbar-brand {
     padding: 0 15px;
 }
-
+nav {
+    margin-top: 18px;
+}
+nav a{
+    color: #a0a0a0;
+}
+nav a:hover{
+    color: #ba031a;
+}
+.navbar-nav>li>a{
+    margin-right: 14px;
+    line-height: 17px;
+}
+/*li.geserdikit{
+    margin-left: 17px;
+    border: solid 1px #ba031a;
+    border-radius: 32px;
+    padding: 0px 0 0 14px;
+}*/
+.gbr{
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    height:662px;
+}
+.navbar-nav>li.geserdikit>a{
+   /* color:#ba031a;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;*/
+    margin-left: 17px;
+    border: solid 1px #ba031a;
+    border-radius: 32px;
+    padding: 12px 18px 12px 18px;
+}
+.navbar-nav>li.geserdikit>a:hover{
+    background-color:#ba031a !important;
+    color:#FFF;
+    font-weight: normal;
+}
+/*li .geserdikit:hover{
+    text-decoration: none;
+    border-radius: 32px;
+    background-color:#ba031a !important;
+    color:#FFF !important;
+    font-size: 14px;
+    text-transform: uppercase;
+}*/
+.navbar-nav>li>a {
+    padding-top: 9px;
+    padding-bottom: 8px;
+}
+.ayam{
+    margin-left:0px;
+}
 @media(min-width:768px) {
 
     .navbar-fixed-top .navbar-brand {
