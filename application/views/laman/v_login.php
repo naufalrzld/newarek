@@ -3,14 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
     <!-- Page Content -->
-
-        <div class="row ayam">
-            <div class="col-lg-7 gbr">
+    <div class="container-fluid">
+        <div class="row gbr">
+            <div class="col-lg-7">
                     <div class="logo"></div>
                     <div class="tulisan">
                         <p class="judul">Aplikasi Rekruitasi </p>
                         <p class="motion">Mobile Innovation Laboratory</p>
-                        <p class="tahun"><?php echo date("Y")+1;?></p>
+                        <p class="tahun"><?php echo date("Y");?></p>
                         <div class="lbr_grs grs">
 
                         </div>
@@ -36,12 +36,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="form-group">
                                 <input type="password" class="form-control" id="pwd"  placeholder="Password">
                             </div>
+                            <div class="form-group">
+                                <a href="#" class="pull-right forgot">Forgotten Your Password</a>
+                            </div>
                             <button type="submit" class="btn btn-danger btn-lg btn-block tombol-login">Sign In</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     <!-- /.container -->
 
     
