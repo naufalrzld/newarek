@@ -20,6 +20,9 @@ class Login extends MY_Controller {
 	 */
 	public function index()
 	{
-		$this->login_page('laman/v_login');
+        $this->login_page('laman/v_login');
 	}
+	public function Dashboard(){
+        $this->laman('laman/v_dash');
+    }
 }

@@ -3,12 +3,36 @@ class MY_Controller extends CI_Controller
 {
     function login_page($content, $data = NULL){
         $data['content'] = $this->load->view($content, $data, TRUE);
-        $this->load->view('template/index_login', $data);
+        $page = basename($_SERVER['PHP_SELF']);
+        $data['page'] = $page;
+        switch ($page){
+            case 'index.php':
+                $data['nama']= 'Aplikasi Rekrutmen Mobile Innovation ';
+                break;
+
+            case 'Dashboard':
+                $data['nama']= 'Dashboard | Arek Motion Laboratory';
+
+                break;
+        }
+        $this->load->view('template/index', $data);
     }
-    // function login_page($content, $data = NULL){
-    //     $data['content'] = $this->load->view($content, $data, TRUE);
-    //     $this->load->view('template/login/index', $data);
-    // }
+    function laman($content, $data = NULL){
+        $data['content'] = $this->load->view($content, $data, TRUE);
+        $page = basename($_SERVER['PHP_SELF']);
+        $data['page'] = $page;
+        switch ($page){
+            case 'index.php':
+                $data['nama']= 'Aplikasi Rekrutmen Mobile Innovation ';
+                break;
+
+            case 'Dashboard':
+                $data['nama']= 'Dashboard | Arek Motion Laboratory';
+
+                break;
+        }
+        $this->load->view('template/indexb4', $data);
+    }
     // function dashboard_page($content, $data = NULL){
     //     $data['content'] = $this->load->view($content, $data, TRUE);
     //     $this->load->view('template/dashboard/index', $data);

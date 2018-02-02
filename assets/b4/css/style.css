@@ -1,0 +1,76 @@
+.navbar-brand{
+    color:#FFF !important;
+}
+li.nav-item > a.menu_link_txt,.menu_link_txt{
+    color:#FFF !important;
+}
+.welcome{
+    margin-right: 120px;
+
+}
+.welcome_txt{
+    padding-top: 16px;
+    display: inline;
+    color: #FFF;
+}
+.nama{
+    font-weight: bold;
+}
+.sesi{
+    background-color: #ba031a;
+    width: 90px;
+    color: #FFF;
+    height: 420px;
+    position: relative;
+    left: 125px;
+    top: 42px;
+    padding:0;
+    color: rgba(255, 255, 255, 0.35);
+}
+.nomor{
+
+    font-size: 99px;
+    text-align: right;
+    font-weight: bold;
+    position: relative;
+    right: -15px;
+    top: -37px;
+}
+.judul_sesi{
+    transform: rotate(270deg);
+    font-weight: bold;
+    font-size: 36px;
+    width: 168px;
+    line-height: 37px;
+    position: relative;
+    top: 140px;
+    left: -46px;
+}
+.card.formulir {
+    position: relative;
+    top: 42px;
+    left: 139px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+.logo{
+	width:47px;
+	height:50px;
+	background:url("../img/logo.png");
+	position:relative;
+	left:149px;
+	margin-right: 45px;
+}
+.copyright{
+	position: relative;
+    left: 139px;
+	line-height: 22px;
+}
+.dropdown-toggle::after{
+    vertical-align:middle !important;
+}
