@@ -6,21 +6,25 @@ li.nav-item > a.menu_link_txt,.menu_link_txt{
 }
 .welcome{
     margin: 0 120px 0 23px;
-
 }
 .welcome_txt{
-    padding-top: 16px;
     display: inline;
     color: #FFF;
-}
-.nama{
+    position: relative;
+    top: 8px;
     font-weight: bold;
+}
+.last_log{
+   display: block;
+    font-weight: 200;
+    font-size:12px;
 }
 .sesi{
     background-color: #ba031a;
     width: 90px;
     color: #FFF;
     height: 420px;
+    border-radius:2px;
     position: relative;
     left: 125px;
     top: 42px;
@@ -39,12 +43,12 @@ li.nav-item > a.menu_link_txt,.menu_link_txt{
 .judul_sesi{
     transform: rotate(270deg);
     font-weight: bold;
-    font-size: 36px;
+    font-size: 49px;
     width: 168px;
-    line-height: 37px;
+    line-height: 55px;
     position: relative;
-    top: 140px;
-    left: -46px;
+    top: 137px;
+    left: -38px;
 }
 .card.formulir {
     position: relative;
@@ -73,4 +77,31 @@ li.nav-item > a.menu_link_txt,.menu_link_txt{
 }
 .dropdown-toggle::after{
     vertical-align:middle !important;
+}
+.home{
+    background: url('../../img/home.svg');
+    width:32px;
+    height:32px;
+    position: relative;
+    top: 5px;
+}
+.menu{
+    background-color: #fcfcfc;
+    border-bottom: 1px solid #e4e4e4;
+    height: 72px;
+}
+li.dropdown.jarak{
+    margin-left:80px;
+    height: 61px;
+    position: relative;
+    top: 7px;
+}
+.dropdown-menu.utama{
+    top:58px;
+}
+li.dropdown.jarak.show{
+    border-bottom: 3px solid #ba031a;
+    height: 61px;
+    position: relative;
+    bottom: -5px;
 }
