@@ -32,10 +32,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="grs_sign"></div>
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="email" placeholder="Username">
+                                <input type="text" class="form-control" id="email" name="username" placeholder="Username">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="pwd"  placeholder="Password">
+                                <input type="password" class="form-control" id="pwd" name="pass" placeholder="Password">
                             </div>
                             <div class="form-group">
                                 <a href="#" class="pull-right forgot">Forgotten Your Password</a>
