@@ -105,3 +105,21 @@ li.dropdown.jarak.show{
     position: relative;
     bottom: -5px;
 }
+.register{
+    font-size: 1rem !important;
+}
+.reg-box{
+    position: relative;
+    top:42px;
+    margin-bottom: 2%;
+    font-size: 14px;
+}
+.jrk_dlm{
+    padding: 4%;
+}
+.have_acc{
+    font-size:12px;
+}
+.gndr{
+    margin-bottom: 2%;
+}
