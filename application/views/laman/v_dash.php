@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
     <!-- Page Content -->
-<body>
 <nav class="navbar justify-content-between navbar-light bg-danger">
     <a class="navbar-brand" href="#">
         <img src="img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -84,16 +83,84 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 Biodata Diri
             </div>
         </div>
-        <div class="col-lg-8">
-            <div class="card formulir">
+        <div class="col-lg-6 formulir">
+            <div class="card ">
                 <div class="card-header">
-                    Biodata Diri
+                    Biodata Diri Detail
                 </div>
                 <div class="card-body">
-                    Bagian ini akan diisi pada pertemuan selanjutnya.
+                    <?php echo form_open();?>
+                    <div class="form-row">
+                        <div class="col-8">
+                            <label> Nama Lengkap</label>
+                            <input type="text" class="form-control form-control-sm" placeholder="Muhammad Adi Bayu Setiawan" readonly>
+                        </div>
+                        <div class="col-4">
+                            <label> NIM</label>
+                            <input type="text" class="form-control form-control-sm" name="nim">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-6">
+                            <label>Fakultas</label>
+                            <select class="custom-select form-control-sm">
+                                <option selected>Pilih Fakultas</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-5">
+                            <label>Program Studi</label>
+                            <select class="custom-select form-control-sm">
+                                <option selected>Pilih Program Studi</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-6">
+                            <label>Angkatan</label>
+                            <select class="custom-select form-control-sm">
+                                <option selected>Pilih Angkatan</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-5">
+                            <label>ID Line</label>
+                            <input type="text" class="form-control form-control-sm" placeholder="e.g puspita">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="col-lg-3 formulir">
+            <div class="card">
+                <div class="card-header">
+                    Peminatan
+                </div>
+                <div class="card-body">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Mobile Programming</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">UI / UX Designer</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio3">Business Analyst</label>
+                    </div>
+                    <p>*Pilih berdasarkan keinginan mu</p>
+                </div>
+            </div>
+        </div>
+        <?php echo form_close();?>
     </div>
 </div>
 <footer class="footer">
@@ -109,7 +176,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 </footer>
 
-</body>
     <!-- /.container -->
 
     

@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="#">Registration Info</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li class="geserdikit"><a href="#">Sign Up</a></li>
+                        <li class="geserdikit"><a href="<?php echo base_url(); ?>Register">Sign Up</a></li>
                     </ul>
                 </nav>
                 <div class="row">
