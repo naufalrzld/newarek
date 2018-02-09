@@ -25,11 +25,16 @@ li.nav-item > a.menu_link_txt,.menu_link_txt{
     color: #FFF;
     height: 420px;
     border-radius:2px;
-    position: relative;
-    left: 125px;
-    top: 42px;
-    padding:0;
     color: rgba(255, 255, 255, 0.35);
+    padding: 0;
+
+}
+.sesi_pos{
+          position: relative;
+    top: 42px;
+    padding: 0;
+    width: 87%;
+    left: 136px;
 }
 .nomor{
 
@@ -52,8 +57,8 @@ li.nav-item > a.menu_link_txt,.menu_link_txt{
 }
 .formulir {
     position: relative;
-    top: 42px;
-    left: 139px;
+/*     top: 42px;
+    left: 139px; */
 }
 .footer {
     position: absolute;
@@ -69,6 +74,15 @@ li.nav-item > a.menu_link_txt,.menu_link_txt{
 	position:relative;
 	left:149px;
 	margin-right: 45px;
+}
+.logo_foot{
+    width:47px;
+    height:50px;
+    background:url("../../img/logo_mini.png");
+    position:relative;
+    left:149px;
+    margin-right: 45px;
+    background-repeat: no-repeat;
 }
 .copyright{
 	position: relative;
@@ -122,4 +136,20 @@ li.dropdown.jarak.show{
 }
 .gndr{
     margin-bottom: 2%;
+}
+.copyright{
+    position: relative;
+    left: 50px;
+    line-height: 22px;
+    width: 300px;
+}
+.mt-logo{
+    margin-top: 6%;
+    margin-right: 0;
+/*     margin-bottom: 2%; */
+}
+.fixed-bottom.foot{
+    position:  absolute;
+    bottom:  unset !important;
+
 }

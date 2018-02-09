@@ -76,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--End of Nav Bawah header-->
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row sesi_pos">
         <div class="col-lg-1 sesi">
             <div class="nomor">1</div>
             <div class="judul_sesi">
@@ -163,19 +163,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <?php echo form_close();?>
     </div>
 </div>
-<footer class="footer">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-1">
-                <div class="logo"></div>
-            </div>
-            <div class="col-lg-2 copyright">
-                <p> Copyright &copy; 2018 &bull; All Right Reserved  Designed by RAM</p>
-            </div>
+<div class="fixed-bottom foot">
+    <div class="row mt-logo">
+        <div class="col-1 logo_foot">
+            <!-- <div class="logo_foot"></div> -->
+        </div>
+        <div class="col-3">
+            <p class="copyright">Copyright &copy; <?php echo date("Y");?> &bull; All right Reserved. Aplikasi Rekrutmen Mobile Innovation Laboratory</p>
         </div>
     </div>
-</footer>
-
+</div>
+    
     <!-- /.container -->
 
     
