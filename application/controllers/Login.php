@@ -27,13 +27,28 @@ class Login extends MY_Controller {
 	public function login(){
         $username = $this->input->post('username');
         $pass = $this->input->post('pass');
-
         $log = $this->M_user->verifyLogin($username,$pass);
-
-
+        if ($log != FALSE){
+            $array = array(
+                'logged_in' => TRUE,
+                'id' => $log->id_users,
+                'username' => $log->username
+            );
+            $this->session->set_userdata( $array );
+            $data["nama"] = "Halaman Utama";
+            redirect('Home','refresh',$data);
+        }
+        $this->session->set_flashdata('errors', 'Username atau password salah');
+        redirect("/");
     }
-	public function Dashboard(){
-        $this->laman('laman/v_dash');
-
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('/','refresh');
+    }
+    public function test()
+    {
+        // $this->load->model('M_user');
+        // var_dump($this->M_user->verifyLogin("ipat","ganteng"));
     }
 }

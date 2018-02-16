@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $nama;?></title>
+    <title><?php echo $nama; ?></title>
 
     <!-- Bootstrap Core CSS -->
 

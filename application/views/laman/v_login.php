@@ -30,12 +30,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-lg-8 formulir">
                         <p class="signin">Sign In</p>
                         <div class="grs_sign"></div>
-                        <form>
+                        <?php echo form_open('Login/login'); ?>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="email" name="username" placeholder="Username">
+                                <input type="text" class="form-control" id="email" name="username" placeholder="Username" required>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="pwd" name="pass" placeholder="Password">
+                                <input type="password" class="form-control" id="pwd" name="pass" placeholder="Password" required>
                             </div>
                             <div class="form-group">
                                 <a href="#" class="pull-right forgot">Forgotten Your Password</a>

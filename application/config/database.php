@@ -77,7 +77,7 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => '1202962432',
+	'password' => '',
 	'database' => 'newarek',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -94,3 +94,4 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+	
