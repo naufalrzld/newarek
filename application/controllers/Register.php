@@ -15,5 +15,8 @@ class Register extends MY_Controller {
             // 'products' => $this->Products_model->getItemforHome(),
         );
         $this->laman('laman/v_reg',$data);
+        $this->input->post('usr');
+        $this->input->get('email');
+        $this->input->post('pwd');
     }
 }

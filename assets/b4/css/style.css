@@ -153,3 +153,18 @@ li.dropdown.jarak.show{
     bottom:  unset !important;
 
 }
+.title_reg{
+    width:140px;
+    font-size: 18px;
+}
+.jrk_logo{
+    margin-bottom: 5%;
+}
+.thn{
+    color:#ba031a;
+    font-weight: bold;
+    border-bottom: solid 2px #ba031a
+}
+.form-group {
+    margin-bottom: 0.5rem !important;
+}

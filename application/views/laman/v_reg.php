@@ -3,20 +3,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 ?>
 <?php echo $script;?>
-    <!-- Page Content -->
-<!--<nav class="navbar bg-danger">
-    <a class="navbar-brand register" href="#">
-        <img src="<?php /*echo base_url();*/?>assets/img/mini-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        Pendaftaran Calon Anggota
-    </a>
-</nav>-->
 <div class="container-fluid reg-box">
     <div class="row">
         <div class="col-4 mx-auto">
             <div class="card">
                 <div class="card-body jrk_dlm">
-                    <h5 class="card-title text-center mb-4 mt-3">Daftarkan dirimu sekarang !</h5>
+                <div class="row jrk_logo">
+                    <div class="col-6 mx-auto">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="<?php echo base_url();?>assets/img/logo_arek.png" class="img-fluid">
+                            </div>
+                            <div class="col-6">  
+                                <div class="title_reg">
+                                    Aplikasi Rekrutmen <span class="thn"><?php echo date("Y");?></span>   
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <h6 class="card-title text-center mb-4 mt-3">Daftarkan dirimu sekarang !</h6>
                    <?php echo form_open();?>
+                   <div class="form-group">
+                        <input type="text" class="form-control form-control-sm" name="nama" placeholder="Nama Lengkap">
+                    </div>
                     <div class="form-group">
                         <input type="text" class="form-control form-control-sm" name="usr" placeholder="Masukkan nama pengguna">
                     </div>
