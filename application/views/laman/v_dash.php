@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Page Content -->
 <nav class="navbar justify-content-between navbar-light bg-danger">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="<?php echo base_url() . '/Home';?>">
         <img src="img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
         Dashboard Page
     </a>
@@ -13,8 +13,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Menu Bar-->
         <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
             <p class="welcome_txt">
-               Muhammad Adi Bayu Setiawan
-                <span class="last_log">Login Terakhir: <?php echo date('D, d/m/Y');?></span>
+               <?php echo $nama; ?>
+                <span class="last_log">Login Terakhir: <?php echo $last_login;?></span>
             </p>
             <ul class="navbar-nav welcome">
                 <img src="<?php echo base_url();?>assets/img/user.svg" width="50" height="50" d-inline-block align-top img-fluid" alt="">
@@ -93,7 +93,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="form-row">
                         <div class="col-8">
                             <label> Nama Lengkap</label>
-                            <input type="text" class="form-control form-control-sm" placeholder="Muhammad Adi Bayu Setiawan" readonly>
+                            <input type="text" class="form-control form-control-sm" value="<?php echo $nama; ?>" readonly>
                         </div>
                         <div class="col-4">
                             <label> NIM</label>

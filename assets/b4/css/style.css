@@ -166,5 +166,17 @@ li.dropdown.jarak.show{
     border-bottom: solid 2px #ba031a
 }
 .form-group {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.6rem !important;
+    padding-bottom: 2px;
 }
+.form_reg  input[type="text"], input[type="password"], input[type="email"]{
+   border-top:none;
+   border-left:none;
+   border-right: none;
+   border-bottom: 2px dashed #D32F2F;
+} 
+.form_reg  input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
+   outline: 0;
+   border-bottom: 2px solid #2196F3;
+   box-shadow: none
+} 

@@ -1,7 +1,10 @@
 <?php
 class M_user extends CI_Model{
-    public function tambahUser($data){
-        $this->db->insert('users', $data);
+    public function tambahUser($data_user,$data_participants){
+        $this->db->insert('users', $data_user);
+        $id_users = $this->db->insert_id();
+        $data_participants['id_users'] = $id_users;
+        $this->db->insert('participants', $data_participants);
     }
     public function verifyLogin($username, $pass){
 
@@ -15,5 +18,11 @@ class M_user extends CI_Model{
             }
         }
         return FALSE;
+    }
+    public function getDetailById($id_users){
+        $this->db->where('participants.id_users', $id_users);
+        $this->db->join('users', 'participants.id_users = users.id_users');
+        $query = $this->db->get('participants');
+        return $query->result_array()[0];
     }
 }

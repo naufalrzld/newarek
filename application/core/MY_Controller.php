@@ -30,7 +30,7 @@ class MY_Controller extends CI_Controller
                 $data['nama']= 'Dashboard | Arek Motion Laboratory';
                 break;
             case 'register':
-                $data['nama']= 'Register Account | Arek Motion Laboratory';
+                $data['nama']= 'Registerasi Akun | Arek Motion Laboratory';
         }
         $this->load->view('template/indexb4', $data);
     }

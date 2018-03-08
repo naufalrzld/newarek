@@ -23,29 +23,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
                     <h6 class="card-title text-center mb-4 mt-3">Daftarkan dirimu sekarang !</h6>
-                   <?php echo form_open();?>
+                   <?php 
+                    $attr = array('class' => 'form_reg');
+                   echo form_open('Login/register',$attr);?>
                    <div class="form-group">
-                        <input type="text" class="form-control form-control-sm" name="nama" placeholder="Nama Lengkap">
+                        <input type="text" class="form-control form-control-sm" name="nama" placeholder="Nama Lengkap" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-sm" name="usr" placeholder="Masukkan nama pengguna">
+                        <input type="text" class="form-control form-control-sm" name="usr" placeholder="Masukkan nama pengguna" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control form-control-sm" name="email" placeholder="Masukkan alamat surel">
+                        <input type="email" class="form-control form-control-sm" name="email" placeholder="Masukkan alamat surel" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control form-control-sm" name="pwd" placeholder="Masukkan kata sandi">
+                        <input type="password" class="form-control form-control-sm" name="pwd" placeholder="Masukkan kata sandi" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control form-control-sm" name="pwd2" placeholder="Konfirmasi kata sandi">
+                        <input type="password" class="form-control form-control-sm" name="pwd2" placeholder="Konfirmasi kata sandi" required>
                     </div>
                     <div align="center" class="gndr">
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline1" name="gender" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadioInline1">Laki-laki</label>
+                            <input type="radio" id="customRadioInline1" name="gender" class="custom-control-input" value="Laki-laki" >
+                            <label class="custom-control-label" for="customRadioInline1" checked>Laki-laki</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline2" name="gender" class="custom-control-input">
+                            <input type="radio" id="customRadioInline2" name="gender" class="custom-control-input" value="Perempuan">
                             <label class="custom-control-label" for="customRadioInline2">Perempuan</label>
                         </div>
                     </div>
