@@ -13,7 +13,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <p class="motion">Mobile Innovation Laboratory</p>
                         <p class="tahun"><?php echo date("Y");?></p>
                         <div class="lbr_grs grs">
-
                         </div>
                     </div>
             </div>

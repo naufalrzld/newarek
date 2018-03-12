@@ -10,6 +10,7 @@ class Home extends MY_Controller {
 	}
 	public function index()
 	{
+
 		$id_users = $this->session->userdata('id');
 		$detil = $this->M_User->getDetailById($id_users);
 		// var_dump($detil);
@@ -18,6 +19,9 @@ class Home extends MY_Controller {
 		$data['last_login'] = $newDate;
         $this->laman('laman/v_dash',$data);
 	}
+	public function test(){
+	    var_dump($_POST);
+    }
 
 }
 
