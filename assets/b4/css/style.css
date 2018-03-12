@@ -77,7 +77,7 @@ li.nav-item > a.menu_link_txt,.menu_link_txt{
 }
 .logo_foot{
     width:47px;
-    height:50px;
+    height:64px;
     background:url("../../img/logo_mini.png");
     position:relative;
     left:149px;
@@ -179,4 +179,20 @@ li.dropdown.jarak.show{
    outline: 0;
    border-bottom: 2px solid #2196F3;
    box-shadow: none
-} 
+}
+.logo_w{
+    height:53px;
+}
+.dash_logo{
+    white-space: unset;
+    font-size:15px;
+    width: 12%;
+    display: inherit;
+
+}
+.logo_txt{
+    margin-left:6%;
+}
+.thn_dash{
+    font-weight: bold;
+}
