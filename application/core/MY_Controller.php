@@ -35,6 +35,9 @@ class MY_Controller extends CI_Controller
             case 'Home':
                 $data['nama']= 'Dashboard | Arek Motion Laboratory';
                 break;
+            case 'Daftar':
+                $data['nama']= 'Registerasi Calon Member | Arek Motion Laboratory';
+                break;
         }
         $this->load->view('template/indexb4', $data);
     }

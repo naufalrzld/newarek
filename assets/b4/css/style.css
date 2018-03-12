@@ -1,3 +1,14 @@
+@font-face {
+    font-family: SFUIMedium;
+    src: url(../../fonts/SFUIDisplay-Medium.otf);
+}
+@font-face {
+    font-family: SFUIReg;
+    src: url(../../fonts/SFUIDisplay-Regular.otf);
+}
+body{
+    font-family: SFUIReg;
+}
 .navbar-brand{
     color:#FFF !important;
 }
@@ -111,13 +122,33 @@ li.dropdown.jarak{
     top: 7px;
 }
 .dropdown-menu.utama{
-    top:58px;
+    top: 62px;
+    border: none;
+    left: -33px;
+    width: 318px;
+    height: 134px;
 }
 li.dropdown.jarak.show{
     border-bottom: 3px solid #ba031a;
     height: 61px;
     position: relative;
     bottom: -5px;
+
+}
+li.dropdown.jarak.show > a.nav-link{
+    color:#ba031a;
+
+}
+.dropdown-menu.utama.show > a.dropdown-item{
+    color:#909090 !important;
+    padding-bottom:20px;
+}
+.dropdown-menu.utama.show > a.dropdown-item:hover{
+    color:#ba031a !important;
+    padding-bottom:20px;
+}
+.dropdown-menu.utama.show > a.dropdown-item:last-child{
+    padding-bottom:0px;
 }
 .register{
     font-size: 1rem !important;
@@ -191,8 +222,101 @@ li.dropdown.jarak.show{
 
 }
 .logo_txt{
-    margin-left:6%;
+    margin-left:5%;
 }
 .thn_dash{
     font-weight: bold;
+}
+.logout_btn{
+    width:50px;
+    height:50px;
+    margin-left:34%;
+}
+a.logout_btn:hover{
+    text-decoration:none;
+}
+a.logout_btn:hover:after{
+    content:"Keluar?";
+    font-size: 14px;
+    color:#FFF;
+    position: relative;
+    left: 15px;
+    top: -8px;
+    font-weight: bold;
+}
+.sambutan h1{
+    font-size: 28px;
+    color:#ba031a;
+    font-family:SFUIMedium;
+}
+.sambutan p.subtitle{
+    font-size: 18px;
+    color:#ba031a;
+    text-transform: capitalize;
+    font-family:SFUIMedium;
+    line-height: 1;
+}
+.grs_welcome{
+    width: 45px;
+    height: 3px;
+    background-color: #ba031a;
+    border-radius:1.5px;
+}
+.content_welcome{
+    color: #909090;
+    font-family:SFUIReg;
+    width:572px;
+    height:66px;
+    text-align: justify;
+    font-size:16px;
+    margin-top:24px;
+}
+.btn_daftar{
+    background-color:#ba031a !important;
+    box-shadow: 0 1px 0 0 rgba(22, 29, 37, 0.1), inset 0 1px 0 1px rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    width: 160px;
+    margin-top:38px;
+    /*margin-bottom:189px;*/
+}
+.btn_daftar:hover{
+    background-color:#E53935 !important;
+    box-shadow: 0 1px 0 0 rgba(22, 29, 37, 0.1), inset 0 1px 0 1px rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    width: 160px;
+    margin-top:38px;
+}
+.tgl_skrg{
+    background-color: #ba031a;
+    color:#FFF;
+}
+.tgl_nomer{
+    font-family: SFUIMedium;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1;
+}
+.today_txt{
+    font-family: SFUIReg;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: left;
+}
+.month_txt{
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+}
+.card.tgl{
+    border-radius: 4px;
+    width: 318px;
+    height: 351px;
+    border: solid 1px #c4cdd5;
 }
