@@ -150,6 +150,9 @@ li.dropdown.jarak.show > a.nav-link{
 .dropdown-menu.utama.show > a.dropdown-item:last-child{
     padding-bottom:0px;
 }
+.nav-item.active.home_menu{
+    border-bottom:3px solid #ba031a;
+}
 .register{
     font-size: 1rem !important;
 }

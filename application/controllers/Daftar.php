@@ -7,7 +7,6 @@ class Daftar extends MY_Controller {
 		parent::__construct();
 		//Do your magic here
 		$this->load->model('M_User');
-        $this->lang->load('calendar', 'bahasa');
 	}
 	public function index()
 	{
