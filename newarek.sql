@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jan 28, 2018 at 06:55 AM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Host: 127.0.0.1
+-- Generation Time: Mar 12, 2018 at 09:02 AM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -68,12 +66,22 @@ CREATE TABLE `menilai` (
 
 CREATE TABLE `participants` (
   `id_users` int(11) NOT NULL,
-  `name` int(11) NOT NULL,
+  `student_id` varchar(10) NOT NULL,
+  `name` varchar(100) NOT NULL,
   `telp` int(11) NOT NULL,
   `id_line` int(11) NOT NULL,
   `minat` enum('UI','MP','BA') NOT NULL,
-  `status_paspor` int(11) NOT NULL DEFAULT '0'
+  `status_paspor` int(11) NOT NULL DEFAULT '0',
+  `gender` varchar(9) NOT NULL,
+  `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `participants`
+--
+
+INSERT INTO `participants` (`id_users`, `student_id`, `name`, `telp`, `id_line`, `minat`, `status_paspor`, `gender`, `email`) VALUES
+(5, '', 'Faishal Rachman', 0, 0, 'UI', 0, 'Laki-laki', 'www.ipat@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -136,9 +144,16 @@ CREATE TABLE `tahapsatu` (
 CREATE TABLE `users` (
   `id_users` int(11) NOT NULL,
   `username` varchar(200) NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `last_login` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id_users`, `username`, `password`, `last_login`) VALUES
+(5, 'akuipat', '$2a$08$GLSM7sS9.Yp6OmWVgFD0/evGWzK3WIahgzWPRo5hup9bjsTuzJ5Lm', '2018-03-08 11:54:03');
 
 --
 -- Indexes for dumped tables
@@ -169,7 +184,9 @@ ALTER TABLE `menilai`
 -- Indexes for table `participants`
 --
 ALTER TABLE `participants`
-  ADD PRIMARY KEY (`id_users`);
+  ADD PRIMARY KEY (`id_users`),
+  ADD UNIQUE KEY `student_id` (`student_id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indexes for table `pengaturan`
@@ -220,7 +237,7 @@ ALTER TABLE `berkas`
 -- AUTO_INCREMENT for table `participants`
 --
 ALTER TABLE `participants`
-  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `pengaturan`
 --
@@ -245,7 +262,7 @@ ALTER TABLE `tahapsatu`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Constraints for dumped tables
 --
@@ -293,7 +310,6 @@ ALTER TABLE `tahapdua`
 --
 ALTER TABLE `tahapsatu`
   ADD CONSTRAINT `FK_tahapsatu` FOREIGN KEY (`id_penilaian`) REFERENCES `penilaian` (`id_penilaian`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
