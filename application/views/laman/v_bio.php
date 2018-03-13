@@ -16,10 +16,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="col-lg-6 formulir">
             <div class="card ">
-                <div class="card-header">
-                    Biodata Diri Detail
+                <div class="card-header card_bio_title">
+                   Detail Biodata diri
                 </div>
-                <div class="card-body">
+                <div class="card-body form_satu">
                     <?php echo form_open("Home/test");?>
                     <div class="form-row">
                         <div class="col-8">
@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="col-4">
                             <label> NIM</label>
-                            <input type="text" class="form-control form-control-sm" name="nim" placeholder="e.g 13131313">
+                            <input type="text" class="form-control form-control-sm" name="nim" placeholder="e.g 1301151234">
                         </div>
                     </div>
                     <div class="form-row">
@@ -65,19 +65,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="col-5">
                             <label>ID Line</label>
-                            <input type="text" class="form-control form-control-sm" placeholder="e.g puspita">
+                            <input type="text" class="form-control form-control-sm" placeholder="e.g puspita (without @)">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 formulir">
+        <div class="col-lg-4 formulir">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header card_bio_title">
                     Peminatan
                 </div>
-                <div class="card-body">
-                    <div class="custom-control custom-radio">
+                <div class="card-body peminatan">
+                    <div class="custom-control custom-radio ">
                         <input type="radio" id="customRadio1" name="peminatan" class="custom-control-input" value="MP" checked>
                         <label class="custom-control-label" for="customRadio1">Mobile Programming</label>
                     </div>
@@ -89,24 +89,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <input type="radio" id="customRadio3" name="peminatan" class="custom-control-input" value="BA" >
                         <label class="custom-control-label" for="customRadio3">Business Analyst</label>
                     </div>
-                    <p>*Pilih berdasarkan keinginan mu</p>
+                    <p class="pilihlah">*Pilih berdasarkan keinginan mu</p>
                 </div>
             </div>
-            <button type="submit">Aprifak</button>
+             <div class="custom-control custom-checkbox setuju">
+               <input type="checkbox" class="custom-control-input cek" id="customCheck1">
+               <label class="custom-control-label" for="customCheck1">Data yang telah saya isi adalah data asli</label>
+             </div>
+            <button type="submit" class="btn btn-danger btn-md float-right btn_simpan">Simpan</button>
         </div>
         <?php echo form_close();?>
     </div>
 </div>
-<div class="fixed-bottom foot">
-    <div class="row mt-logo">
-        <div class="col-1 logo_foot">
-            <!-- <div class="logo_foot"></div> -->
-        </div>
-        <div class="col-3">
-            <p class="copyright">Copyright &copy; <?php echo date("Y");?> &bull; All right Reserved. Aplikasi Rekrutmen Mobile Innovation Laboratory</p>
-        </div>
-    </div>
-</div>
+<?php $this->load->view('menu/footer');?>
 <script>
 function loadProdi(str){
     var xhttp = new XMLHttpRequest();

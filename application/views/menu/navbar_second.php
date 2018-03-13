@@ -1,11 +1,11 @@
 <nav class="navbar menu navbar-expand-lg navbar-light bg-light">
-    <div class="container">
+    <div class="container" id="menu">
         <ul class="navbar-nav jarak">
-            <li class="nav-item active home_menu">
-                <a class="navbar-brand mx-auto" href="Home"><div class="home"></div> </a>
+            <li class="nav-item  home_menu" id="Home">
+                <a class="navbar-brand mx-auto" href="<?php echo base_url();?>Home" target="_self"><div class="home"></div> </a>
             </li>
             <li class="nav-item dropdown jarak">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" target="_self" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Informasi Rekrutmen
                 </a>
                 <div class="dropdown-menu utama" aria-labelledby="navbarDropdownMenuLink">

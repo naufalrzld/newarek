@@ -38,6 +38,8 @@ li.nav-item > a.menu_link_txt,.menu_link_txt{
     border-radius:2px;
     color: rgba(255, 255, 255, 0.35);
     padding: 0;
+    font-family: arial;
+    margin-bottom: 5%;
 
 }
 .sesi_pos{
@@ -134,6 +136,9 @@ li.dropdown.jarak.show{
     position: relative;
     bottom: -5px;
 
+}
+.home_active{
+    background: url('../../img/home_red.svg');
 }
 li.dropdown.jarak.show > a.nav-link{
     color:#ba031a;
@@ -322,4 +327,96 @@ a.logout_btn:hover:after{
     width: 318px;
     height: 351px;
     border: solid 1px #c4cdd5;
+}
+.btn_simpan{
+    background-color:#ba031a !important;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: SFUIReg;
+    width: 115px;
+    margin-top:36px;
+    padding: 8px 20px 8px 20px;
+}
+.setuju{
+    margin-top: 25px;
+}
+.custom-checkbox .custom-control-label::before{
+    background: none;
+    border: 1px solid #ba031a;
+}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+    background-color: transparent;
+}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after{
+    background-image: url('../../img/centang.png');
+}
+.peminatan label{
+    font-size: 14px;
+    margin-bottom: 21px;
+}
+.pilihlah{
+    font-size: 14px;
+    margin-top: 31px;
+    color: #909090;
+}
+.card_bio_title{
+    font-size: 18px;
+    color: #909090;
+    text-transform: capitalize;
+    font-family: SFUIReg;
+}
+.card-body.form_satu .form-row{
+    margin-bottom: 20px;
+    color: #212b36;
+    font-size: 14px;
+}
+.ketentuan_brks,.isi_rar{
+    font-size: 14px;
+}
+.ketentuan_brks,.isi_rar > ol{
+    line-height: 2.3;
+}
+.rar{
+    color: #ba031a;
+    font-weight: bold;
+}
+.contoh_format{
+    font-size: 11px;
+    font-weight: bold;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    /* filter: alpha(opacity=0); */
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.file_siap{
+    font-size: 12px;
+    font-weight: bold;
+    color: #ba031a; 
+}
+.ket_format{
+    font-size: 14px;
+    font-weight: 300;
+    color: #909090;
+}
+.ket_format:before{
+    content: " - ";
+}
+.bintang{
+    font-size: 12px;
+    color:  #ba031a;
 }

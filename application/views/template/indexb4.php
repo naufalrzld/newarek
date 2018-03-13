@@ -44,7 +44,13 @@ echo $content;
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url();?>assets/b4/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>assets/b4/js/kustom.js"></script>
+    <script>
+    $(document).ready(function(){
+        menu();
+    });
 
+    </script>
 </body>
 
 </html>
