@@ -41,6 +41,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             ?>
             <p>Peminatan: <span class="minat_txt"><?php echo $minat;?></span></p>
+            <p>Status Unggah Berkas:
+                 <?php 
+                if($berkas == NULL){
+                    $berkas =  "Belum Unggah Berkas";
+                }else{
+                    $berkas =  "Sudah Mengunggah Berkas";
+                }
+                echo $berkas;?>
+            </p>
             <p>Status Cetak Paspor: 
                 <?php 
                 if($paspor == 0){

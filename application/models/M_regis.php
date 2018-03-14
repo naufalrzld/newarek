@@ -15,8 +15,7 @@ class M_regis extends CI_Model{
 		
 	}
 	public function viewDetailsProfile($id){
-		// SELECT *  FROM participants JOIN fakultas ON(id_fakultas = fakultas) JOIN prodi ON ( id_prodi = program) WHERE 
-		$this->db->select('name,nama_prodi,nama_fakultas,gender,angkatan,id_line,minat,student_id,last_login,status_paspor');
+		$this->db->select('name,nama_prodi,nama_fakultas,gender,angkatan,id_line,minat,student_id,last_login,status_paspor,id_berkas');
 		$this->db->from('participants');
 		$this->db->join('fakultas', 'id_fakultas = fakultas');
 		$this->db->join('prodi', 'id_prodi = program');
