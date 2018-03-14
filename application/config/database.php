@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '52.230.20.60',
+	'hostname' => 'localhost',
 	'username' => 'arekmotion',
 	'password' => 'm0t!on_ar3K_2018#',
 	'database' => 'arekmotion',
