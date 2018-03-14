@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2018 at 01:31 PM
--- Server version: 10.1.29-MariaDB
--- PHP Version: 7.2.0
+-- Generation Time: 14 Mar 2018 pada 16.55
+-- Versi Server: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -38,21 +38,29 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `berkas`
+-- Struktur dari tabel `berkas`
 --
 
 CREATE TABLE `berkas` (
   `id_berkas` int(11) NOT NULL,
   `nama_berkas` varchar(100) NOT NULL,
-  `status_upload` int(11) NOT NULL DEFAULT '0',
   `tgl_upload` datetime NOT NULL,
-  `id_users` int(11) NOT NULL
+  `path` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `berkas`
+--
+
+INSERT INTO `berkas` (`id_berkas`, `nama_berkas`, `tgl_upload`, `path`) VALUES
+(1, 'b374kshell1.zip', '2018-03-14 00:00:00', 'C:/xampp/htdocs/newarek/uploads/b374kshell1.zip'),
+(2, 'b374kshell2.zip', '2018-03-14 00:00:00', 'C:/xampp/htdocs/newarek/uploads/b374kshell2.zip'),
+(3, 'b374kshell3.zip', '2018-03-14 00:00:00', 'C:/xampp/htdocs/newarek/uploads/b374kshell3.zip');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fakultas`
+-- Struktur dari tabel `fakultas`
 --
 
 CREATE TABLE `fakultas` (
@@ -61,7 +69,7 @@ CREATE TABLE `fakultas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `fakultas`
+-- Dumping data untuk tabel `fakultas`
 --
 
 INSERT INTO `fakultas` (`id_fakultas`, `nama_fakultas`) VALUES
@@ -76,7 +84,7 @@ INSERT INTO `fakultas` (`id_fakultas`, `nama_fakultas`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `menilai`
+-- Struktur dari tabel `menilai`
 --
 
 CREATE TABLE `menilai` (
@@ -87,7 +95,7 @@ CREATE TABLE `menilai` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `participants`
+-- Struktur dari tabel `participants`
 --
 
 CREATE TABLE `participants` (
@@ -102,22 +110,14 @@ CREATE TABLE `participants` (
   `email` varchar(100) NOT NULL,
   `fakultas` int(11) DEFAULT NULL,
   `program` int(11) DEFAULT NULL,
-  `status_bio` int(11) NOT NULL DEFAULT '0'
+  `status_bio` int(11) NOT NULL DEFAULT '0',
+  `id_berkas` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `participants`
---
-
-INSERT INTO `participants` (`id_users`, `student_id`, `name`, `id_line`, `minat`, `status_paspor`, `gender`, `angkatan`, `email`, `fakultas`, `program`, `status_bio`) VALUES
-(10, '1301150034', 'Rama Aditya Maulana', 'ramaadtym', 'MP', 0, 'Laki-laki', 2015, 'ramaadtym@gmail.com', 2, 8, 0),
-(11, '1301154160', 'Faishal Rachman', 'ipatganteng', 'BA', 0, 'Laki-laki', 2013, 'ipat@gmail.com', 2, 8, 1),
-(12, NULL, 'apri', '', NULL, 0, 'Laki-laki', 0, 'aprianil@gmail.com', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengaturan`
+-- Struktur dari tabel `pengaturan`
 --
 
 CREATE TABLE `pengaturan` (
@@ -130,7 +130,7 @@ CREATE TABLE `pengaturan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penilaian`
+-- Struktur dari tabel `penilaian`
 --
 
 CREATE TABLE `penilaian` (
@@ -142,7 +142,7 @@ CREATE TABLE `penilaian` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prodi`
+-- Struktur dari tabel `prodi`
 --
 
 CREATE TABLE `prodi` (
@@ -152,7 +152,7 @@ CREATE TABLE `prodi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `prodi`
+-- Dumping data untuk tabel `prodi`
 --
 
 INSERT INTO `prodi` (`id_prodi`, `id_fakultas`, `nama_prodi`) VALUES
@@ -198,7 +198,7 @@ INSERT INTO `prodi` (`id_prodi`, `id_fakultas`, `nama_prodi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tahapdua`
+-- Struktur dari tabel `tahapdua`
 --
 
 CREATE TABLE `tahapdua` (
@@ -211,7 +211,7 @@ CREATE TABLE `tahapdua` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tahapsatu`
+-- Struktur dari tabel `tahapsatu`
 --
 
 CREATE TABLE `tahapsatu` (
@@ -225,7 +225,7 @@ CREATE TABLE `tahapsatu` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -234,15 +234,6 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `last_login` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id_users`, `username`, `password`, `last_login`) VALUES
-(10, 'ramaadtym', '$2a$08$9tAwHRhm4rpHdh7VLtfbleF/0j3aajAaDZBC.nYAJyBXRVw2bnGnO', '2018-03-14 03:56:12'),
-(11, 'ipatganteng', '$2a$08$WrCoaNfrMx6TuMdd9Bk7sewN/uPgKjUv7UjlS0tMCbSx38sIE9qXq', '2018-03-14 05:42:28'),
-(12, 'aprianil', '$2a$08$Yi4ITHAqZR7DpqpJ1iS/s.DU6q/sOL4D1AdKX.vkfcYYNP4YaCbvS', '2018-03-14 07:06:02');
 
 --
 -- Indexes for dumped tables
@@ -259,8 +250,7 @@ ALTER TABLE `admin`
 -- Indexes for table `berkas`
 --
 ALTER TABLE `berkas`
-  ADD PRIMARY KEY (`id_berkas`),
-  ADD KEY `FK_berkas` (`id_users`);
+  ADD PRIMARY KEY (`id_berkas`);
 
 --
 -- Indexes for table `fakultas`
@@ -336,7 +326,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `berkas`
 --
 ALTER TABLE `berkas`
-  MODIFY `id_berkas` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_berkas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `fakultas`
@@ -387,31 +377,25 @@ ALTER TABLE `users`
   MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `admin`
+-- Ketidakleluasaan untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD CONSTRAINT `FK_admin` FOREIGN KEY (`id_users`) REFERENCES `users` (`id_users`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `FK_pengaturan` FOREIGN KEY (`id_pengaturan`) REFERENCES `pengaturan` (`id_pengaturan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `berkas`
---
-ALTER TABLE `berkas`
-  ADD CONSTRAINT `FK_berkas` FOREIGN KEY (`id_users`) REFERENCES `participants` (`id_users`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `menilai`
+-- Ketidakleluasaan untuk tabel `menilai`
 --
 ALTER TABLE `menilai`
   ADD CONSTRAINT `FK_menilai_admin` FOREIGN KEY (`id_users`) REFERENCES `admin` (`id_users`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `FK_menilai_penilaian` FOREIGN KEY (`id_penilaian`) REFERENCES `penilaian` (`id_penilaian`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `participants`
+-- Ketidakleluasaan untuk tabel `participants`
 --
 ALTER TABLE `participants`
   ADD CONSTRAINT `FK_idFakultas` FOREIGN KEY (`fakultas`) REFERENCES `fakultas` (`id_fakultas`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -419,19 +403,19 @@ ALTER TABLE `participants`
   ADD CONSTRAINT `FK_participants` FOREIGN KEY (`id_users`) REFERENCES `users` (`id_users`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `penilaian`
+-- Ketidakleluasaan untuk tabel `penilaian`
 --
 ALTER TABLE `penilaian`
   ADD CONSTRAINT `FK_penilaian` FOREIGN KEY (`id_users`) REFERENCES `participants` (`id_users`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tahapdua`
+-- Ketidakleluasaan untuk tabel `tahapdua`
 --
 ALTER TABLE `tahapdua`
   ADD CONSTRAINT `FK_tahapdua` FOREIGN KEY (`id_penilaian`) REFERENCES `penilaian` (`id_penilaian`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tahapsatu`
+-- Ketidakleluasaan untuk tabel `tahapsatu`
 --
 ALTER TABLE `tahapsatu`
   ADD CONSTRAINT `FK_tahapsatu` FOREIGN KEY (`id_penilaian`) REFERENCES `penilaian` (`id_penilaian`) ON DELETE CASCADE ON UPDATE CASCADE;
