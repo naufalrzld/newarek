@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row sesi_pos">
     	<div class="col-4">
     		<div class="card" style="width: 18rem;">
-    		  <img class="card-img-top avatar" src="<?php echo base_url();?>assets/img/boy.svg" alt="Card image cap">
+    		  <img class="card-img-top avatar" src="<?php echo base_url();?>assets/img/boy.png" alt="Card image cap">
     		  <!-- <div class="card-body">
     		    <span class="btn btn-outline-primary btn-block btn-file">
     		        Cari Foto <input type="file">

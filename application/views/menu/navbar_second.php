@@ -9,7 +9,7 @@
                     Informasi Rekrutmen
                 </a>
                 <div class="dropdown-menu utama" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Alur Rekrutmen</a>
+                    <a class="dropdown-item" href="Info/Alur">Alur Rekrutmen</a>
                     <a class="dropdown-item" href="#">Persyaratan & Mekanisme</a>
                     <a class="dropdown-item" href="#">Profil Peminatan</a>
                 </div>

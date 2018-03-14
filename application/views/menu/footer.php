@@ -1,4 +1,4 @@
-<div class="fixed-bottom foot">
+<div class="foot">
     <div class="row mt-logo">
         <div class="col-1 logo_foot">
             <!-- <div class="logo_foot"></div> -->

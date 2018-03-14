@@ -41,6 +41,9 @@ class MY_Controller extends CI_Controller
             case 'Unggah':
                 $data['nama']= 'Unggah Berkas | Arek Motion Laboratory';
                 break;
+            case 'Alur':
+                $data['nama']= 'Alur Pendaftaran | Arek Motion Laboratory';
+                break;
         }
         $this->load->view('template/indexb4', $data);
     }

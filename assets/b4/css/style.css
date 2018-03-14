@@ -128,7 +128,7 @@ li.dropdown.jarak{
     border: none;
     left: -33px;
     width: 318px;
-    height: 134px;
+    height: 152px;
 }
 li.dropdown.jarak.show{
     border-bottom: 3px solid #ba031a;
@@ -146,14 +146,17 @@ li.dropdown.jarak.show > a.nav-link{
 }
 .dropdown-menu.utama.show > a.dropdown-item{
     color:#909090 !important;
-    padding-bottom:20px;
+    padding:12px;
 }
 .dropdown-menu.utama.show > a.dropdown-item:hover{
     color:#ba031a !important;
-    padding-bottom:20px;
+    padding:12px;
 }
 .dropdown-menu.utama.show > a.dropdown-item:last-child{
-    padding-bottom:0px;
+    padding:12px;
+}
+.dropdown-menu.utama.show > a.dropdown-item:last-child:hover{
+    padding:12px;
 }
 .nav-item.active.home_menu{
     border-bottom:3px solid #ba031a;
@@ -484,4 +487,14 @@ a.logout_btn:hover:after{
 }
 .content > p {
     color: #ba031a;
+}
+.alur{
+    margin-top: 4%;
+    margin-bottom: 5%;
+}
+.dropdown-menu.utama.show > a.dropdown-item:active{
+    color: #FFF !important;
+    text-decoration: none;
+    background-color: #ba031a;
+
 }
