@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <select name="angkatan" class="custom-select form-control-sm">
                                 <option value="">Pilih Angkatan</option>
                                 <?php
-                                for ($i=1;$i<=7;$i++)
+                                for ($i=3;$i<=7;$i++)
                                     echo "<option value=\"201$i\">201$i</option>";
                                 ?>
                             </select>

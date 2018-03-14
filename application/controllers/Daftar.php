@@ -21,7 +21,7 @@ class Daftar extends MY_Controller
         $data['last_login'] = $newDate;
         if ($detil["status_bio"] == 1) {
             $this->session->set_flashdata('oops', 'Maaf Anda telah mengisi biodata');
-            redirect('Home');
+            redirect('Daftar/unggah');
         } else {
             $this->laman('laman/v_bio', $data);
         }
