@@ -25,4 +25,5 @@ class M_user extends CI_Model{
         $query = $this->db->get('participants');
         return $query->result_array()[0];
     }
+    
 }

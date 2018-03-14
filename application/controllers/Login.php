@@ -117,4 +117,5 @@ class Login extends MY_Controller {
         // $this->load->model('M_user');
         // var_dump($this->M_user->verifyLogin("ipat","ganteng"));
     }
+
 }

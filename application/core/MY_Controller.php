@@ -44,6 +44,10 @@ class MY_Controller extends CI_Controller
         }
         $this->load->view('template/indexb4', $data);
     }
+     function profil($content, $data = NULL){
+        $data['content'] = $this->load->view($content, $data, TRUE);
+         $this->load->view('template/index_profil', $data);
+     }
     // function dashboard_page($content, $data = NULL){
     //     $data['content'] = $this->load->view($content, $data, TRUE);
     //     $this->load->view('template/dashboard/index', $data);

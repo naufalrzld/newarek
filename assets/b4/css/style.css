@@ -406,6 +406,8 @@ a.logout_btn:hover:after{
 .file_siap{
     font-size: 12px;
     font-weight: bold;
+}
+.file_siap,.minat_txt{
     color: #ba031a; 
 }
 .ket_format{
@@ -419,4 +421,24 @@ a.logout_btn:hover:after{
 .bintang{
     font-size: 12px;
     color:  #ba031a;
+}
+.avatar{
+    background: url('../../img/profil_bg.jpg');
+    padding: 5%;
+}
+.detail_user{
+    line-height: 0.5;
+}
+.line_acc{
+    color: #8BC34A;
+}
+.line_acc:before{
+    content: "@";
+}
+.line_acc:hover{
+    text-decoration: none;
+    color: #AED581;
+}
+.namanya{
+    margin-bottom: 4%;
 }

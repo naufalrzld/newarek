@@ -20,15 +20,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                    Detail Biodata diri
                 </div>
                 <div class="card-body form_satu">
-                    <?php echo form_open("Home/test");?>
+                    <?php echo form_open("Home/bio");?>
                     <div class="form-row">
                         <div class="col-8">
                             <label> Nama Lengkap</label>
                             <input type="text" class="form-control form-control-sm" value="<?php echo $nama_user; ?>" readonly>
+                            <input type="hidden" class="form-control form-control-sm" value="<?php echo $this->session->userdata('id'); ?>" name="id_usr">
                         </div>
                         <div class="col-4">
                             <label> NIM</label>
-                            <input type="text" class="form-control form-control-sm" name="nim" placeholder="e.g 1301151234">
+                            <input type="text" class="form-control form-control-sm" name="nim" placeholder="e.g 1301151234" name="nim">
                         </div>
                     </div>
                     <div class="form-row">
@@ -65,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="col-5">
                             <label>ID Line</label>
-                            <input type="text" class="form-control form-control-sm" placeholder="e.g puspita (without @)">
+                            <input type="text" name="line" class="form-control form-control-sm" placeholder="e.g puspita (without @)">
                         </div>
                     </div>
                 </div>

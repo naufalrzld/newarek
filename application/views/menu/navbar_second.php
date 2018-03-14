@@ -19,9 +19,9 @@
                     Registrasi Calon Anggota
                 </a>
                 <div class="dropdown-menu utama" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Form Biodata Diri</a>
+                    <a class="dropdown-item" href="<?php echo base_url().'Daftar';?>">Form Biodata Diri</a>
                     <a class="dropdown-item" href="#">Form Upload Berkas</a>
-                    <a class="dropdown-item" href="#">Cetak Paspor</a>
+                    <a class="dropdown-item" href="<?php echo base_url().'Profile';?>">Cetak Paspor</a>
                 </div>
             </li>
             <li class="nav-item dropdown jarak">
@@ -47,3 +47,13 @@
         </ul>
     </div>
 </nav>
+<?php if($this->session->flashdata('oops')){?>
+<div class="alert alert-danger" role="alert">
+   <?php
+     echo $this->session->flashdata('oops');
+    ?>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<?php } ?>

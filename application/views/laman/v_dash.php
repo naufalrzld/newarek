@@ -11,7 +11,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Nav bawah Header-->
 
 <!--End of Nav Bawah header-->
-
 <div class="container-fluid">
     <div class="row sesi_pos">
         <div class="col-8 sambutan">
@@ -22,7 +21,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 Semua proses rekruitasi calon member atau member baru Mobile Innovation Laboratory 2018 akan melalui website ini. Selamat mengikuti proses rekruitasi.
                 “Every Movement is Motion !!”
             </p>
-            <a href="<?php echo base_url().'Daftar'?>" class="btn btn-danger btn-md btn_daftar">Daftar &rarr;</a>
+            <?php if($status_isi==0){?>
+                <a href="<?php echo base_url().'Daftar'?>" class="btn btn-danger btn-md btn_daftar">Daftar &rarr;</a>
+            <?php } else{?>
+                <a href="<?php echo base_url().'Profile'?>" class="btn btn-danger btn-md btn_daftar">Lihat Data &rarr;</a>
+            <?php }?>
         </div>
         <div class="col-4">
             <div class="card tgl">
