@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                    Detail Biodata diri
                 </div>
                 <div class="card-body form_satu">
-                    <?php echo form_open("Home/bio");?>
+                    <?php echo form_open("Functions/submitBio");?>
                     <div class="form-row">
                         <div class="col-8">
                             <label> Nama Lengkap</label>
@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
              <div class="custom-control custom-checkbox setuju">
-               <input type="checkbox" class="custom-control-input cek" id="customCheck1">
+               <input type="checkbox" class="custom-control-input cek" id="customCheck1" required>
                <label class="custom-control-label" for="customCheck1">Data yang telah saya isi adalah data asli</label>
              </div>
             <button type="submit" class="btn btn-danger btn-md float-right btn_simpan">Simpan</button>
@@ -116,7 +116,7 @@ function loadProdi(str){
             document.getElementById("prodi").innerHTML = output;
         }
     };
-    xhttp.open("GET", "<?php echo base_url() . 'Ajax/prodi?id='?>"+str, true);
+    xhttp.open("GET", "<?php echo base_url() . 'Functions/prodi?id='?>"+str, true);
     xhttp.send();
 }
 </script>

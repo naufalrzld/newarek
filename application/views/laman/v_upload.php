@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="card-body">
                     <div class="row">
                         <div class="col-6 ketentuan_brks">
-                            <?php echo form_open();?>
+                            <?php echo form_open_multipart('Functions/submitBerkas');?>
                             <p>Sebelum menggunggah, Anda harus:</p>
                             <ol>
                                 <li>Mengompresi semua berkas ke dalam bentuk <span class="rar">.rar</span></li>
@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="col-6">
                             <label class="btn btn-primary btn-block" for="my-file-selector">
-                                <input id="my-file-selector" type="file" style="display:none" 
+                                <input id="my-file-selector" name="userfile" type="file" style="display:none"
                                 onchange="$('#upload-file-info').html(this.files[0].name)">
                                 Tambahkan Berkas
                             </label>

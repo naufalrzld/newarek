@@ -24,6 +24,17 @@ class M_regis extends CI_Model{
         $this->db->where('participants.id_users = ', $id);
      	$kue = $this->db->get()->result_array()[0];
         return $kue;
-	}	
+	}
+	public function tambahBerkas($file_details,$id){
+        $data = array(
+            'nama_berkas' => $file_details['file_name'],
+            'path' => $file_details['full_path'],
+            'tgl_upload' => date("Y/m/d")
+        );
+        $this->db->insert('berkas',$data);
+        $id_berkas = $this->db->insert_id();
+        $this->db->where('id_users',$id);
+        $this->db->update('participants',array('id_berkas'=>$id_berkas));
+    }
 }
 ?>

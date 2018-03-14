@@ -21,18 +21,6 @@ class Home extends MY_Controller {
 		$data['status_isi'] = $detil["status_bio"];	
         $this->laman('laman/v_dash',$data);
 	}
-	public function bio(){
-	    // var_dump($_POST);
-	    $id = $this->input->post('id_usr');
-	    $nim = $this->input->post('nim');
-	    $fak = $this->input->post('fakultas');
-	    $prodi = $this->input->post('prodi');
-	    $angk = $this->input->post('angkatan');
-	    $minat = $this->input->post('peminatan');
-	    $line = $this->input->post('line');
-	    $this->M_Regis->tambahBio($nim,$line,$fak,$prodi,$angk,$minat,$id);
-
-    }
 
 }
 

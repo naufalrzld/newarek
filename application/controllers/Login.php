@@ -104,8 +104,8 @@ class Login extends MY_Controller {
             $data["nama"] = "Halaman Utama";
             redirect('Home','refresh',$data);
         }
-        echo "uname salah";
         $this->session->set_flashdata('errors', 'Username atau password salah');
+        redirect('/');
     }
     public function logout()
     {
