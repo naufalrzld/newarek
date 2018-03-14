@@ -325,7 +325,7 @@ a.logout_btn:hover:after{
 .card.tgl{
     border-radius: 4px;
     width: 318px;
-    height: 351px;
+    font-size: 12px;
     border: solid 1px #c4cdd5;
 }
 .btn_simpan{
@@ -441,4 +441,47 @@ a.logout_btn:hover:after{
 }
 .namanya{
     margin-bottom: 4%;
+}
+/*============*/
+/*Timeline*/
+/*============*/
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #ba031a;
+  top: 0;
+  bottom: 0;
+  margin-left: -3px;
+}
+.container.bulat {
+ /*  padding: 10px 40px; */
+  position: relative;
+  background-color: inherit;
+  /* width: 50%; */
+}
+.container.bulat::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #FFEB3B;
+  border: 4px solid #ba031a;
+  top: 9px;
+  border-radius: 50%;
+  z-index: 1;
+  left: -13px;
+}
+.content > h5{
+    font-size: 16px;
+    font-weight: bold;
+}
+.content > p {
+    color: #ba031a;
 }

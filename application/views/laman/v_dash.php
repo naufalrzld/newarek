@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
                 <div class="card-body">
-
+                   <?php $this->load->view('menu/timeline');?>
                 </div>
             </div>
         </div>
