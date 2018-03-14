@@ -44,6 +44,15 @@ class MY_Controller extends CI_Controller
             case 'Alur':
                 $data['nama']= 'Alur Pendaftaran | Arek Motion Laboratory';
                 break;
+            case 'Minat':
+                $data['nama']= 'Profil Peminatan | Arek Motion Laboratory';
+                break;
+            case 'Syarat':
+                $data['nama']= 'Profil Peminatan | Arek Motion Laboratory';
+                break;    
+            default:
+                redirect('Home');
+                break;
         }
         $this->load->view('template/indexb4', $data);
     }

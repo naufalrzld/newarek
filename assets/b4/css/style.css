@@ -498,3 +498,31 @@ a.logout_btn:hover:after{
     background-color: #ba031a;
 
 }
+.content_minat{
+    padding: 2%;
+}
+.content_minat p{
+    text-align: justify;
+}
+.nav-tabs.minat_tab .nav-link{
+    border: none;
+}
+.nav-tabs.minat_tab .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+    color: #ba031a !important;
+    background-color: #fff;
+    border-bottom: 3px solid #ba031a;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.nav-tabs.minat_tab .nav-link:hover, .nav-tabs .nav-link:focus{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.nav-tabs.minat_tab a.nav-item.nav-link{
+    color: #909090;
+}
+.minat_tab_content{
+    margin-bottom: 5%;
+}

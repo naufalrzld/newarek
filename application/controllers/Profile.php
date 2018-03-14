@@ -24,7 +24,8 @@ class Profile extends MY_Controller {
 			'line' => $detil['id_line'],
 			'minat' => $detil['minat'],
 			'angk' => $detil['angkatan'],
-			'paspor' => $detil['status_paspor']
+			'paspor' => $detil['status_paspor'],
+			'berkas' => $detil['id_berkas']
 		);
 		// $data['nama_user'] = $detil['name'];
 		// $data['prodi'] = $detil['nama_prodi'];

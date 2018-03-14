@@ -10,7 +10,7 @@ class Info extends MY_Controller {
 		$this->load->model('M_Regis');
 	}
 
-	public function alur(){
+	public function Alur(){
 		$id_users = $this->session->userdata('id');
 		$detil = $this->M_User->getDetailById($id_users);
 		// var_dump($detil);
@@ -19,7 +19,7 @@ class Info extends MY_Controller {
 		$data['last_login'] = $newDate;
 		$this->laman('laman/v_alur',$data);
 	}
-	public function minat(){
+	public function Minat(){
 		$id_users = $this->session->userdata('id');
 		$detil = $this->M_User->getDetailById($id_users);
 		// var_dump($detil);
@@ -27,5 +27,14 @@ class Info extends MY_Controller {
 		$newDate = date("D, d/M/Y", strtotime($detil['last_login']));
 		$data['last_login'] = $newDate;
 		$this->laman('laman/v_profminat',$data);
+	}
+	public function Syarat(){
+		$id_users = $this->session->userdata('id');
+		$detil = $this->M_User->getDetailById($id_users);
+		// var_dump($detil);
+		$data['nama_user'] = $detil['name'];
+		$newDate = date("D, d/M/Y", strtotime($detil['last_login']));
+		$data['last_login'] = $newDate;
+		$this->laman('laman/v_syarat',$data);
 	}
 }

@@ -83,7 +83,7 @@ class Functions extends MY_Controller
             $this->M_regis->tambahBerkas($this->upload->data(),$this->session->userdata('id'));
         }
 
-        redirect('Daftar/unggah');
+        redirect('Daftar/Unggah');
     }
 
 }

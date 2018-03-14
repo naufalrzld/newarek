@@ -9,9 +9,9 @@
                     Informasi Rekrutmen
                 </a>
                 <div class="dropdown-menu utama" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="Info/Alur">Alur Rekrutmen</a>
-                    <a class="dropdown-item" href="#">Persyaratan & Mekanisme</a>
-                    <a class="dropdown-item" href="#">Profil Peminatan</a>
+                    <a class="dropdown-item" href="<?php echo base_url().'Info/Alur';?>">Alur Rekrutmen</a>
+                    <a class="dropdown-item" href="<?php echo base_url().'Info/Syarat';?>">Persyaratan & Mekanisme</a>
+                    <a class="dropdown-item" href="<?php echo base_url().'Info/Minat';?>">Profil Peminatan</a>
                 </div>
             </li>
             <li class="nav-item dropdown jarak">
