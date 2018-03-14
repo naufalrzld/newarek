@@ -19,6 +19,9 @@ class Functions extends MY_Controller
     }
     public function prodi()
     {
+        if (!$this->session->userdata("logged_in")){
+            redirect("/");
+        }
         if (!empty($_GET['id'])) {
             $id = $_GET['id'];
             $this->db->where("id_fakultas", intval($id));
@@ -29,6 +32,9 @@ class Functions extends MY_Controller
 
     }
     public function submitBio(){
+        if (!$this->session->userdata("logged_in")){
+            redirect("/");
+        }
 //        var_dump($_POST);
         if ($this->session->userdata("logged_in")) {
             $id = $this->session->userdata('id');
@@ -73,6 +79,9 @@ class Functions extends MY_Controller
         redirect("Daftar");
     }
     public function submitBerkas(){
+        if (!$this->session->userdata("logged_in")){
+            redirect("/");
+        }
         $config['upload_path']          = './uploads/';
         $config['allowed_types']        = 'rar|zip';
         $config['max_size']             = 1024*1024*5;

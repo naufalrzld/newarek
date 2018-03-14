@@ -10,6 +10,9 @@ class Profile extends MY_Controller {
 	public function index()
 	{
 
+        if (!$this->session->userdata("logged_in")){
+            redirect("/");
+        }
 		$id_users = $this->session->userdata('id');
 		// $detil = $this->M_User->getDetailById($id_users);
 		// echo $id_users;

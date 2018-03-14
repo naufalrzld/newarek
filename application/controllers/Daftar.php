@@ -12,6 +12,9 @@ class Daftar extends MY_Controller
 
     public function index()
     {
+        if (!$this->session->userdata("logged_in")){
+            redirect("/");
+        }
         $id_users = $this->session->userdata('id');
         $detil = $this->M_User->getDetailById($id_users);
         // var_dump($detil);
@@ -21,7 +24,7 @@ class Daftar extends MY_Controller
         $data['last_login'] = $newDate;
         if ($detil["status_bio"] == 1) {
             $this->session->set_flashdata('oops', 'Maaf Anda telah mengisi biodata');
-            redirect('Daftar/unggah');
+            redirect('Daftar/Unggah');
         } else {
             $this->laman('laman/v_bio', $data);
         }
@@ -29,6 +32,9 @@ class Daftar extends MY_Controller
 
     public function Unggah()
     {
+        if (!$this->session->userdata("logged_in")){
+            redirect("/");
+        }
         $id_users = $this->session->userdata('id');
         $detil = $this->M_User->getDetailById($id_users);
          
