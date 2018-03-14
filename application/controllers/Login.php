@@ -77,13 +77,13 @@ class Login extends MY_Controller {
                             $data_participants['gender'] = $gender;
                             $data_participants['email'] = $mail;
                             $this->M_user->tambahUser($data_users,$data_participants);
-                            $this->flashdata->set_flashdata("status","Pendaftaran Berhasil");
+                            $this->session->set_flashdata("status","Pendaftaran Berhasil");
                             redirect("/");
 
                     }
                     else
                     {
-                        $this->flashdata->set_flashdata("status",validation_errors());
+                        $this->session->set_flashdata("status",validation_errors());
                         redirect("/");
                     }
                 }
