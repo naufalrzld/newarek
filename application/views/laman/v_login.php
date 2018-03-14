@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <input type="password" class="form-control" id="pwd" name="pass" placeholder="Password" required>
                             </div>
                             <div class="form-group">
-                                <a href="#" class="pull-right forgot">Forgotten Your Password</a>
+                                <a href="#" class="pull-right forgot"><?php echo $this->session->flashdata("status");?></a>
                             </div>
                             <button type="submit" class="btn btn-danger btn-lg btn-block tombol-login">Sign In</button>
                         </form>
