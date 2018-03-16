@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     	<div class="col-4">
     		<div class="card" style="width: 18rem;">
     		  <img class="card-img-top avatar" src="<?php echo base_url();?>assets/img/boy.png" alt="Card image cap">
+              
     		  <!-- <div class="card-body">
     		    <span class="btn btn-outline-primary btn-block btn-file">
     		        Cari Foto <input type="file">
@@ -50,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 }
                 echo $berkas;?>
             </p>
-            <p>Status Cetak Paspor: 
+          <!--   <p>Status Cetak Paspor: 
                 <?php 
                 if($paspor == 0){
                     $paspor =  "Belum mencetak";
@@ -59,9 +60,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 }
                 echo $paspor;?>
                     
-            </p>    
+            </p>  -->   
             <a href="<?php echo base_url().'Paspor';?>" class="btn btn-danger btn-block" role="button" target="_blank">Cetak Paspor</a>
+            <p class="print_saran">*Disarankan menggunakan Browser Chrome untuk mencetak paspor</p>
     	</div>
 	</div>
+    <div class="row bg_howto">
+        <div class="col-8 mx-auto">
+             <img src="<?php echo base_url().'assets/img/howto.jpg';?>" class="img-fluid">
+        </div>
+    </div>
 </div>
 <?php $this->load->view('menu/footer');?>

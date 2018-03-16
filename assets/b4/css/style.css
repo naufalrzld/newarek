@@ -575,3 +575,13 @@ a.logout_btn:hover:after{
     font-weight: bold;
 
 }
+.bg_howto{
+    background-color: #e8e8e8;
+    margin-top: 7%;
+}
+.print_saran{
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 2%;
+    color: #ba031a;
+}

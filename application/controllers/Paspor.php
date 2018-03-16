@@ -48,4 +48,5 @@ class Paspor extends MY_Controller {
 
 	$this->paspor('laman/qr',$params);
 	}
+	
 }
