@@ -60,6 +60,10 @@ class MY_Controller extends CI_Controller
         $data['content'] = $this->load->view($content, $data, TRUE);
          $this->load->view('template/index_profil', $data);
      }
+     function paspor($content, $data = NULL){
+        $data['content'] = $this->load->view($content, $data, TRUE);
+         $this->load->view('template/index_paspor', $data);
+     }
     // function dashboard_page($content, $data = NULL){
     //     $data['content'] = $this->load->view($content, $data, TRUE);
     //     $this->load->view('template/dashboard/index', $data);

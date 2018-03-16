@@ -526,3 +526,52 @@ a.logout_btn:hover:after{
 .minat_tab_content{
     margin-bottom: 5%;
 }
+.bg_paspor{
+    background-color: #f5f8f9;
+}
+.paspor_title{
+    margin-left: 5%;
+    padding-top: 2%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.bio_detil > p{
+    margin-left: 4%;
+    color: #fd3a25;
+    font-size: 19px;
+    line-height: 1;
+}
+.bio_detil {
+    line-height: 0.7;
+    padding-top: 32px;
+    padding-left: 12%;
+    /* margin-left: 6%; */
+}  
+.bts_bwh{
+    border-bottom: 4px solid #fd3a25;
+    padding-bottom: 2%;
+}
+.note_paspor{
+        padding-top: 32px;
+
+}
+.stamp_title{
+    position: relative;
+    top: -14px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #f5f8f9;
+    width: 196px;
+    padding: 0 8px 0 8px;
+}   
+.printed{
+    font-size: 11px;
+    text-align: right;
+    line-height: 1.5;
+    color: #c4c4c4;
+}
+.printed span{
+    font-weight: bold;
+
+}

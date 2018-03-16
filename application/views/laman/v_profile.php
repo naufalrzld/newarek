@@ -60,7 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 echo $paspor;?>
                     
             </p>    
-            <a href="#" class="btn btn-danger btn-block" role="button">Cetak Paspor</a>
+            <a href="<?php echo base_url().'Paspor';?>" class="btn btn-danger btn-block" role="button" target="_blank">Cetak Paspor</a>
     	</div>
 	</div>
 </div>
