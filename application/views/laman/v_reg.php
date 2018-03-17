@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <input type="text" class="form-control form-control-sm" name="nama" placeholder="Nama Lengkap" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-sm" name="usr" placeholder="Masukkan nama pengguna" required>
+                        <input type="text" class="form-control form-control-sm" name="usr" placeholder="Masukkan username" required>
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control form-control-sm" name="email" placeholder="Masukkan alamat surel" required>
@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div align="center" class="gndr">
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline1" name="gender" class="custom-control-input" value="Laki-laki" >
+                            <input type="radio" id="customRadioInline1" name="gender" class="custom-control-input" value="Laki-laki" checked>
                             <label class="custom-control-label" for="customRadioInline1" checked>Laki-laki</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">

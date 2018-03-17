@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     Format Penamaan File rar:
                                     <span class="contoh_format">
                                         [Peminatan_Tahun Angkatan_Nama Lengkap.rar]
-                                        Contoh: UI/UX_2016_Faishal Rachman.rar
+                                        Contoh: UIUX_2016_Faishal Rachman.rar
                                     </span>
                                 </li>
                             </ol>

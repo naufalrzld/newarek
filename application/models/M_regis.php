@@ -15,7 +15,7 @@ class M_regis extends CI_Model{
 		
 	}
 	public function viewDetailsProfile($id){
-		$this->db->select('name,nama_prodi,nama_fakultas,gender,angkatan,id_line,minat,student_id,last_login,status_paspor,id_berkas');
+		$this->db->select('name,nama_prodi,nama_fakultas,gender,angkatan,id_line,minat,student_id,last_login,status_paspor');
 		$this->db->from('participants');
 		$this->db->join('fakultas', 'id_fakultas = fakultas');
 		$this->db->join('prodi', 'id_prodi = program');
@@ -27,13 +27,22 @@ class M_regis extends CI_Model{
 	public function tambahBerkas($file_details,$id){
         $data = array(
             'nama_berkas' => $file_details['file_name'],
+            'tgl_upload' => date("Y/m/d"),
             'path' => $file_details['full_path'],
-            'tgl_upload' => date("Y/m/d")
+            'id_users' => $id
+
         );
         $this->db->insert('berkas',$data);
         $id_berkas = $this->db->insert_id();
         $this->db->where('id_users',$id);
-        $this->db->update('participants',array('id_berkas'=>$id_berkas));
+        // $this->db->update('participants');
+    }
+    public function updateStatusPaspor($id){
+    	$data = array(
+    		'status_paspor' =>1
+    	);
+    	$this->db->where('id_users', $id);
+		$this->db->update('participants', $data);
     }
 }
 ?>

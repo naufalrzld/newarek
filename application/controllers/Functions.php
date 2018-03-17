@@ -44,37 +44,34 @@ class Functions extends MY_Controller
             $angk = $this->input->post('angkatan');
             $minat = $this->input->post('peminatan');
             $line = $this->input->post('line');
-//        $config = array(
-//            array(
-//                'field' => 'nim',
-//                'label' => 'NIM',
-//                'rules' => 'trim|required|numeric'
-//            ),
-//            array(
-//                'field' => 'fakultas',
-//                'label' => 'Data Fakultas',
-//                'rules' => 'trim|required|numeric'
-//            ),
-//            array(
-//                'field' => 'prodi',
-//                'label' => 'Program Studi',
-//                'rules' => 'trim|required|numeric'
-//            ),
-//            array(
-//                'field' => 'gender',
-//                'label' => 'Gender',
-//                'rules' => 'trim|required'
-//            )
-//        );
-//        $this->form_validation->set_rules($config);
-//        if ($this->form_validation->run() != FALSE) {
+       $config = array(
+           array(
+               'field' => 'nim',
+               'label' => 'NIM',
+               'rules' => 'trim|required|numeric'
+           ),
+           array(
+               'field' => 'fakultas',
+               'label' => 'Data Fakultas',
+               'rules' => 'trim|required|numeric'
+           ),
+           array(
+               'field' => 'prodi',
+               'label' => 'Program Studi',
+               'rules' => 'trim|required|numeric'
+           )
+       );
+       $this->form_validation->set_rules($config);
+       if ($this->form_validation->run() != FALSE) {
             $this->M_regis->tambahBio($nim, $line, $fak, $prodi, $angk, $minat, $id);
 
-//        }
-//        else
-//        {
-//            var_dump($_POST);
-//        }
+}
+       else
+       {
+            echo validation_errors();
+           $this->session->set_flashdata("jenisalert","alert-danger");
+           $this->session->set_flashdata("oops",validation_errors());
+       }
         }
         redirect("Daftar");
     }
@@ -82,15 +79,29 @@ class Functions extends MY_Controller
         if (!$this->session->userdata("logged_in")){
             redirect("/");
         }
+        if ($this->input->server('REQUEST_METHOD') == "POST"){
         $config['upload_path']          = './uploads/';
-        $config['allowed_types']        = 'rar|zip';
-        $config['max_size']             = 1024*1024*5;
+        $config['allowed_types']        = 'rar';
+        $config['max_size']             = 1024*4;
+        $namafile = $_FILES['userfile']['name'];
+        if (preg_match("/(UIUX|MP|BA)_[0-9]+_[A-z| ]+.(rar|zip)/", $namafile)){
 
         $this->load->library('upload', $config);
         if ($this->upload->do_upload('userfile'))
         {
             $this->M_regis->tambahBerkas($this->upload->data(),$this->session->userdata('id'));
         }
+            else{
+
+            $this->session->set_flashdata('oops',$this->upload->display_errors());
+            $this->session->set_flashdata('jenisalert','alert-danger');
+            }
+        }
+        else{
+            $this->session->set_flashdata('oops','Nama File tidak mengikuti aturan!');
+            $this->session->set_flashdata('jenisalert','alert-danger');
+        }
+            }
 
         redirect('Daftar/Unggah');
     }

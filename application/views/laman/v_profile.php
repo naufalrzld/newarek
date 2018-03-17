@@ -9,7 +9,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row sesi_pos">
     	<div class="col-4">
     		<div class="card" style="width: 18rem;">
+                <?php 
+                if($gender == "Laki-laki"){
+                    ?>
     		  <img class="card-img-top avatar" src="<?php echo base_url();?>assets/img/boy.png" alt="Card image cap">
+              <?php } else{?>
+                <img class="card-img-top avatar" src="<?php echo base_url();?>assets/img/girl.png" alt="Card image cap">
+              <?php 
+              }
+              ?>
               
     		  <!-- <div class="card-body">
     		    <span class="btn btn-outline-primary btn-block btn-file">
@@ -51,18 +59,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 }
                 echo $berkas;?>
             </p>
-          <!--   <p>Status Cetak Paspor: 
+           <p>Status Cetak Paspor: 
                 <?php 
                 if($paspor == 0){
                     $paspor =  "Belum mencetak";
+
                 }else{
-                    $paspor =  "Belum mencetak";
+                    $paspor =  "Sudah mencetak";
                 }
                 echo $paspor;?>
                     
-            </p>  -->   
+            </p>
+            <p> Status Registerasi:
+                <?php 
+                if($paspor == "Sudah mencetak"){
+                  echo "Sudah Selesai";
+                }else{
+                    echo "Belum Selesai";
+                }
+                ?>
+            </p>
+            <?php
+            if($berkas != "Belum Unggah Berkas"){
+            ?>   
             <a href="<?php echo base_url().'Paspor';?>" class="btn btn-danger btn-block" role="button" target="_blank">Cetak Paspor</a>
+
             <p class="print_saran">*Disarankan menggunakan Browser Chrome untuk mencetak paspor</p>
+            <?php } ?>
     	</div>
 	</div>
     <div class="row bg_howto">

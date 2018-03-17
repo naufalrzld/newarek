@@ -9,7 +9,7 @@ class M_user extends CI_Model{
     public function verifyLogin($username, $pass){
 
         // $hash = $this->bcrypt->hash_password($password);
-        $this->db->where('username',$username);
+        $this->db->where('lower(username)',$username);
         $query = $this->db->get('users');
         if ($query->num_rows() > 0){
             $user = $query->result()[0];

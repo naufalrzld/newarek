@@ -16,11 +16,12 @@ class Login extends MY_Controller {
 
 	public function index()
 	{
-        if ($this->session->userdata('masuk') == TRUE){
-            redirect('Login/Dashboard','refresh');
+        if ($this->session->userdata('logged_in') == TRUE){
+            redirect('Home','refresh');
         }
         $this->login_page('laman/v_login');
 	}
+
 	public function register(){
 
         if ($this->input->server('REQUEST_METHOD') == "POST"){
@@ -38,12 +39,12 @@ class Login extends MY_Controller {
                         array(
                                 'field' => 'usr',
                                 'label' => 'Username',
-                                'rules' => 'trim|required'
+                                'rules' => 'trim|required|strip_tags|min_length[8]|alpha_numeric'
                         ),
                         array(
                                 'field' => 'pwd',
                                 'label' => 'Password',
-                                'rules' => 'trim|required',
+                                'rules' => 'trim|required|min_length[6]',
                                 'errors' => array(
                                         'required' => 'You must provide a %s.',
                                 ),
@@ -68,7 +69,7 @@ class Login extends MY_Controller {
                 $this->form_validation->set_rules($config);
 
                  if ($this->form_validation->run() != FALSE and isset($response['success']) and $response['success'] == true
-                    )
+                     and preg_match("/([a-z]|_|.)+/", strtolower($user)))
                     {
                             $data_users["username"] = $user;
                             $hash = $this->bcrypt->hash_password($pwd);
@@ -95,7 +96,7 @@ class Login extends MY_Controller {
 	public function login(){
         $username = $this->input->post('username');
         $pass = $this->input->post('pass');
-        $log = $this->M_user->verifyLogin($username,$pass);
+        $log = $this->M_user->verifyLogin(strtolower($username),$pass);
         if ($log != FALSE){
             $array = array(
                 'logged_in' => TRUE,

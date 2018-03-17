@@ -17,6 +17,12 @@ class Profile extends MY_Controller {
 		// $detil = $this->M_User->getDetailById($id_users);
 		// echo $id_users;
 		$detil  = $this->M_Regis->viewDetailsProfile($id_users);
+        $this->db->where('id_users',$id_users);
+        $berkasnya = $this->db->get("berkas");
+        if ($berkasnya->num_rows() > 0)
+            $id_berkas = $berkasnya->result_array()[0]['id_berkas'];
+        else
+            $id_berkas = NULL;
 		// var_dump($detil);
 		$data = array(
 			'nama_user' => $detil['name'],
@@ -28,8 +34,8 @@ class Profile extends MY_Controller {
 			'minat' => $detil['minat'],
 			'angk' => $detil['angkatan'],
 			'paspor' => $detil['status_paspor'],
-			'berkas' => $detil['id_berkas']
-		);
+            'berkas' => $id_berkas
+        );
 		// $data['nama_user'] = $detil['name'];
 		// $data['prodi'] = $detil['nama_prodi'];
 		// $data['fak'] = $detil['nama_fakultas'];

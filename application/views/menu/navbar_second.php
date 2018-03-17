@@ -48,7 +48,7 @@
     </div>
 </nav>
 <?php if($this->session->flashdata('oops')){?>
-<div class="alert alert-danger" role="alert">
+<div class="alert <?php echo $this->session->flashdata('jenisalert');?> role="alert">
    <?php
      echo $this->session->flashdata('oops');
     ?>

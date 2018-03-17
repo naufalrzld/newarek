@@ -128,7 +128,7 @@ li.dropdown.jarak{
     border: none;
     left: -33px;
     width: 318px;
-    height: 152px;
+    /* height: 152px; */
 }
 li.dropdown.jarak.show{
     border-bottom: 3px solid #ba031a;
@@ -211,7 +211,7 @@ li.dropdown.jarak.show > a.nav-link{
     margin-bottom: 0.6rem !important;
     padding-bottom: 2px;
 }
-.form_reg  input[type="text"], input[type="password"], input[type="email"]{
+.form_reg  input[type="text"], .form_reg input[type="password"], .form_reg input[type="email"]{
    border-top:none;
    border-left:none;
    border-right: none;

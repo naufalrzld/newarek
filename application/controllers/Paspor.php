@@ -45,7 +45,7 @@ class Paspor extends MY_Controller {
 	$params['prodi'] = $prodi;
 	// var_dump($params['data']);
 	$this->ciqrcode->generate($params);
-
+	 $detil  = $this->M_regis->updateStatusPaspor($id_users);
 	$this->paspor('laman/qr',$params);
 	}
 	
