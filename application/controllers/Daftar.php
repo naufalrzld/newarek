@@ -15,6 +15,10 @@ class Daftar extends MY_Controller
         if (!$this->session->userdata("logged_in")){
             redirect("/");
         }
+          if($this->session->userdata('status') == "admin" || $this->session->userdata('status') == "super admin" ){
+        	 $this->session->set_flashdata('akses', 'Anda tidak memiliki akses');
+        	redirect('Panitia/Dashboard','refresh');
+        }
         $id_users = $this->session->userdata('id');
         $detil = $this->M_User->getDetailById($id_users);
         // var_dump($detil);
@@ -35,6 +39,10 @@ class Daftar extends MY_Controller
     {
         if (!$this->session->userdata("logged_in")){
             redirect("/");
+        }
+          if($this->session->userdata('status') == "admin" || $this->session->userdata('status') == "super admin" ){
+        	 $this->session->set_flashdata('akses', 'Anda tidak memiliki akses');
+        	redirect('Panitia/Dashboard','refresh');
         }
         $id_users = $this->session->userdata('id');
         $this->db->where('id_users',$id_users);

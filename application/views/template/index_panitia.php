@@ -47,6 +47,9 @@ echo $content;
          $(document).ready(function(){
              menu();
               $('#example').DataTable();
+             $('#dataadm').dataTable( {
+               "lengthMenu": [[ 3, 12, 45, 75, 100,-1],[ 3, 12, 45, 75, 100,"All"]]
+             } );
          });   
         $('.count').each(function () {
             $(this).prop('Counter',0).animate({

@@ -11,6 +11,13 @@ class Info extends MY_Controller {
 	}
 
 	public function Alur(){
+	     if (!$this->session->userdata("logged_in")){
+            redirect("/");
+        }
+	      if($this->session->userdata('status') == "admin" || $this->session->userdata('status') == "super admin" ){
+        	 $this->session->set_flashdata('akses', 'Anda tidak memiliki akses');
+        	redirect('Panitia/Dashboard','refresh');
+        }
 		$id_users = $this->session->userdata('id');
 		$detil = $this->M_User->getDetailById($id_users);
 		// var_dump($detil);
@@ -20,6 +27,13 @@ class Info extends MY_Controller {
 		$this->laman('laman/v_alur',$data);
 	}
 	public function Minat(){
+	     if (!$this->session->userdata("logged_in")){
+            redirect("/");
+        }
+	      if($this->session->userdata('status') == "admin" || $this->session->userdata('status') == "super admin" ){
+        	 $this->session->set_flashdata('akses', 'Anda tidak memiliki akses');
+        	redirect('Panitia/Dashboard','refresh');
+        }
 		$id_users = $this->session->userdata('id');
 		$detil = $this->M_User->getDetailById($id_users);
 		// var_dump($detil);
@@ -29,6 +43,13 @@ class Info extends MY_Controller {
 		$this->laman('laman/v_profminat',$data);
 	}
 	public function Syarat(){
+	     if (!$this->session->userdata("logged_in")){
+            redirect("/");
+        }
+	      if($this->session->userdata('status') == "admin" || $this->session->userdata('status') == "super admin" ){
+        	 $this->session->set_flashdata('akses', 'Anda tidak memiliki akses');
+        	redirect('Panitia/Dashboard','refresh');
+        }
 		$id_users = $this->session->userdata('id');
 		$detil = $this->M_User->getDetailById($id_users);
 		// var_dump($detil);

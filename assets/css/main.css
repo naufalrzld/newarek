@@ -539,3 +539,7 @@ iframe {
 .count{
   font-size: 48px;
 }
+input[type="search"],input[type="search"]:focus{
+  border-bottom:1px solid #ba031a !important;
+  padding-left: 4px;
+}

@@ -9,8 +9,10 @@
                     Pengguna
                 </a>
                 <div class="dropdown-menu utama" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="<?php echo base_url().'Info/Alur';?>">Pengguna Terdaftar</a>
-                    <a class="dropdown-item" href="<?php echo base_url().'Info/Alur';?>">Tambah Panitia</a>
+                    <a class="dropdown-item" href="<?php echo base_url().'Panitia/allUsers';?>">Pengguna Terdaftar</a>
+                    <?php if($status =="super admin"){?>
+                    <a class="dropdown-item" href="<?php echo base_url().'Panitia/addComittee';?>">Tambah Panitia</a>
+                    <?php }?>
                 </div>
             </li>
             <!-- <li class="nav-item dropdown jarak">
@@ -46,10 +48,10 @@
         </ul>
     </div>
 </nav>
-<?php if($this->session->flashdata('oops')){?>
-<div class="alert <?php echo $this->session->flashdata('jenisalert');?> role="alert">
+<?php if($this->session->flashdata('akses')){?>
+<div class="alert alert-danger alert-dismissible" role="alert">
    <?php
-     echo $this->session->flashdata('oops');
+     echo $this->session->flashdata('akses');
     ?>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>

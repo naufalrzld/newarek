@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/newarek';
+$config['base_url'] = 'https://rekrutment.motionlaboratory.id/';
 
 /*
 |--------------------------------------------------------------------------
@@ -521,4 +521,3 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
-$config['encryption_key'] = "Z5SdHyMTyA4cxfIwGZM09uYm3loqp@dv"; 	

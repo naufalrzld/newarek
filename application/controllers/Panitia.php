@@ -10,7 +10,6 @@ class Panitia extends MY_Controller {
     }
 
 	public function index(){
-
 		$this->panitia('laman/adm/v_login');
 	}
 	public function Dashboard(){
@@ -24,13 +23,15 @@ class Panitia extends MY_Controller {
 		$getMP = $this->M_admin->getMP();
 		$getUI = $this->M_admin->getUI();
 		$getAll = $this->M_admin->getCountAllParticipants();
-		$data['nama'] = $get['name'];
+		$data['nama'] = $get['real_name'];
+		$data['status'] = $get['status'];
 		$data['ba'] = $getBA['totalBA'];
 		$data['mp'] = $getMP['totalMP'];
 		$data['ui'] = $getUI['totalUI'];
 		$data['all'] = $getAll['total'];
 		$this->panitia('laman/adm/v_dash',$data);
 	}
+    
 	public function allUsers(){
 		 if (!$this->session->userdata("logged_in")){
             redirect("Panitia");
@@ -38,10 +39,28 @@ class Panitia extends MY_Controller {
 		$id = $this->session->userdata('id'); 
 		$get = $this->M_admin->getDetailAdmin($id);
 		$data['usr'] = $this->M_admin->getAllParticipants();
-		$data['nama'] = $get['name'];
+		$data['status'] = $get['status'];
+		$data['nama'] = $get['real_name'];
 		$this->panitia('laman/adm/v_users',$data);
 	}
-
+	public function addComittee(){
+		 if (!$this->session->userdata("logged_in")){
+            redirect("Panitia");
+        }
+        $id = $this->session->userdata('id'); 
+        $status = $this->session->userdata('status'); 
+        $get = $this->M_admin->getDetailAdmin($id);
+        $data['usr'] = $this->M_admin->getAllParticipants();
+        $data['adm'] =  $this->M_admin->getAdm();
+        $data['nama'] = $get['real_name'];
+		$data['status'] = $get['status'];
+		if($status == "super admin"){
+        	$this->panitia('laman/adm/v_add',$data);
+        }
+        else{
+        	redirect("Panitia/Dashboard");
+        }
+	}
 	public function hpsUsers(){
 		$dcd = base64_decode($this->uri->segment(3));
 		$x = str_replace('id_usernya si dia adalah','',$dcd);
@@ -55,7 +74,7 @@ class Panitia extends MY_Controller {
         if ($log != FALSE){
             $array = array(
                 'logged_in' => TRUE,
-                'status' => 'admin',
+                'status' => $log->status,
                 'id' => $log->id_users,
                 'username' => $log->username
             );
@@ -65,5 +84,21 @@ class Panitia extends MY_Controller {
         else{
         	echo $username;
         }
+	}
+	public function addAdm(){
+		$a = $this->input->post('admId');
+		$b = $this->input->post('admLevel');
+
+		if($a != "0" && $b != "0"){
+			$this->M_admin->setAdm($a,$b);
+			$this->session->set_flashdata('tambahAdm', 'Tambah Panitia berhasil');
+			redirect("Panitia/addComittee");
+			// echo "sip";
+		}
+		else{
+			$this->session->set_flashdata('tambahAdmGagal', 'Tambah Panitia Gagal, Periksa kembali inputan Anda!');
+			redirect("Panitia/addComittee");
+		}
+
 	}
 }

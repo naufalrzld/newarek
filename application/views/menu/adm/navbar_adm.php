@@ -11,7 +11,7 @@
             <p class="welcome_txt">
                 <?php 
                 echo $nama;?>
-                <span class="last_log">Login Terakhir: <?php /*echo $last_login;*/?></span>
+                <span class="last_log">Sebagai <?php echo $status;?></span>
             </p>
             <ul class="navbar-nav welcome">
                 <img src="<?php echo base_url();?>assets/img/user.svg" width="50" height="50" d-inline-block align-top img-fluid" alt="">

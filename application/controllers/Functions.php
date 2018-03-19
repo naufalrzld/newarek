@@ -84,7 +84,7 @@ class Functions extends MY_Controller
         $config['allowed_types']        = 'rar';
         $config['max_size']             = 1024*4;
         $namafile = $_FILES['userfile']['name'];
-        if (preg_match("/(UIUX|MP|BA)_[0-9]+_[A-z| ]+.(rar|zip)/", $namafile)){
+        if (preg_match("/(UIUX|MP|BA)_[0-9]+_([A-z]| )+.(rar|zip)/", $namafile)){
 
         $this->load->library('upload', $config);
         if ($this->upload->do_upload('userfile'))

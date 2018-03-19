@@ -19,11 +19,21 @@ class M_user extends CI_Model{
         }
         return FALSE;
     }
-    public function getDetailById($id_users){
+   /* public function getDetailById($id_users){
         $this->db->where('participants.id_users', $id_users);
         $this->db->join('users', 'participants.id_users = users.id_users');
         $query = $this->db->get('participants');
         return $query->result_array()[0];
     }
-    
+    */
+       public function getDetailById($id_users){
+        $this->db->where('participants.id_users', $id_users);
+        $this->db->join('users', 'participants.id_users = users.id_users');
+        $query = $this->db->get('participants')->result_array()[0];
+        if($query == NULL){
+            return false;
+        }else{
+            return $query;
+        }
+    }
 }
