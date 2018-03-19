@@ -15,16 +15,16 @@
                     <?php }?>
                 </div>
             </li>
-            <!-- <li class="nav-item dropdown jarak">
+            <li class="nav-item dropdown jarak">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Registrasi Calon Anggota
+                    Penerimaan
                 </a>
                 <div class="dropdown-menu utama" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="<?php echo base_url().'Daftar';?>">Form Biodata Diri</a>
-                    <a class="dropdown-item" href="<?php echo base_url().'Daftar/Unggah';?>">Form Upload Berkas</a>
-                    <a class="dropdown-item" href="<?php echo base_url().'Profile';?>">Cetak Paspor</a>
+                    <a class="dropdown-item" href="<?php echo base_url().'Panitia/viewBerkas';?>">Lihat Berkas</a>
+<!--                    <a class="dropdown-item" href="--><?php //echo base_url().'Daftar/Unggah';?><!--">Form Upload Berkas</a>-->
+<!--                    <a class="dropdown-item" href="--><?php //echo base_url().'Profile';?><!--">Cetak Paspor</a>-->
                 </div>
-            </li>-->
+            </li>
             <li class="nav-item dropdown jarak">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Statistik Penerimaan

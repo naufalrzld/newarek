@@ -7,6 +7,7 @@ class Panitia extends MY_Controller {
         parent::__construct();
         //Do your magic here
         $this->load->model('M_admin');
+        $this->load->model('M_berkas');
     }
 
 	public function index(){
@@ -55,12 +56,31 @@ class Panitia extends MY_Controller {
         $data['nama'] = $get['real_name'];
 		$data['status'] = $get['status'];
 		if($status == "super admin"){
-        	$this->panitia('laman/adm/v_add',$data);
+            $this->panitia('laman/adm/v_berkas',$data);
         }
         else{
         	redirect("Panitia/Dashboard");
         }
 	}
+    public function viewBerkas(){
+        if (!$this->session->userdata("logged_in")){
+            redirect("Panitia");
+        }
+        $id = $this->session->userdata('id');
+        $get = $this->M_admin->getDetailAdmin($id);
+        $data['ba'] = $this->M_berkas->getBerkasBA();
+        $data['mp'] = $this->M_berkas->getBerkasMP();
+        $data['ui'] = $this->M_berkas->getBerkasUI();
+        $data['status'] = $get['status'];
+        $data['nama'] = $get['real_name'];
+        $this->panitia('laman/adm/v_berkas',$data);
+    }
+    public function hpsBerkas(){
+        $dcd = base64_decode($this->uri->segment(3));
+        $x = str_replace('id_usernya si dia adalah','',$dcd);
+        $this->M_berkas->hpsBerkas($x);
+        redirect('Panitia/allUsers');
+    }
 	public function hpsUsers(){
 		$dcd = base64_decode($this->uri->segment(3));
 		$x = str_replace('id_usernya si dia adalah','',$dcd);
@@ -101,4 +121,6 @@ class Panitia extends MY_Controller {
 		}
 
 	}
+
+
 }
