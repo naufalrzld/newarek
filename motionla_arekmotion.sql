@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 19, 2018 at 09:21 AM
+-- Generation Time: Mar 20, 2018 at 09:40 PM
 -- Server version: 10.0.31-MariaDB-cll-lve
 -- PHP Version: 5.6.30
 
@@ -44,9 +44,22 @@ INSERT INTO `admin` (`id_users`, `real_name`, `status`, `id_pengaturan`) VALUES
 (27, 'Aditia Rafif', 'super admin', NULL),
 (29, 'muhammad husain', 'admin', NULL),
 (31, 'Raihan Hamid S', 'admin', NULL),
+(58, 'Raya', 'admin', NULL),
 (74, 'Rama Aditya Maulana', 'super admin', NULL),
 (75, 'aprianil', 'super admin', NULL),
-(115, 'Arief Budhiman', 'admin', NULL);
+(101, 'Muhammad Fadhlan Supriadi', 'admin', NULL),
+(107, 'Muhammad Adna Pradana ', 'admin', NULL),
+(112, 'Eldi Rohmanur Ikhsan', 'admin', NULL),
+(114, 'Kharisma Oktavianing Herwanda', 'admin', NULL),
+(115, 'Arief Budhiman', 'admin', NULL),
+(123, 'ryo alif ramadhan', 'admin', NULL),
+(129, 'Ifal Ghifary', 'admin', NULL),
+(131, 'mohamad irwan afandi', 'admin', NULL),
+(133, 'Rita Ajeng Nugraheni', 'admin', NULL),
+(135, 'Vatana Rianti Aldefi', 'super admin', NULL),
+(144, 'Kukuh Rahingga Permadi', 'admin', NULL),
+(145, 'Ranestari Sastriani', 'super admin', NULL),
+(166, 'muh alif al gibran arif', 'admin', NULL);
 
 -- --------------------------------------------------------
 
@@ -70,13 +83,20 @@ INSERT INTO `berkas` (`id_berkas`, `nama_berkas`, `tgl_upload`, `path`, `id_user
 (7, 'MP_2015_Faishal_Rachman.rar', '2018-03-15 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/', 26),
 (9, 'MP_2015_Raya.rar', '2018-03-16 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/', 58),
 (10, 'BA_2015_ALISAPURNAMASUHERMAN.rar', '2018-03-16 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/', 65),
-(18, 'MP_2015_Ram1.rar', '2018-03-16 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/MP_2015_Ram1.rar', 74),
-(19, 'UIUX_2016_Aprianil.rar', '2018-03-16 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/UIUX_2016_Aprianil.rar', 75),
-(20, 'MP_2017_Rezky_Revindo.rar', '2018-03-16 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/MP_2017_Rezky_Revindo.rar', 36),
-(21, 'UIUX_2016_Muhamad_Fahmi_Fakhrezi.rar', '2018-03-17 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/UIUX_2016_Muhamad_Fahmi_Fakhrezi.rar', 50),
-(22, 'UIUX_2016_LINTANI_AFINA.rar', '2018-03-17 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/UIUX_2016_LINTANI_AFINA.rar', 41),
 (24, 'MP_2017_Chairul_Vikri.rar', '2018-03-17 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/MP_2017_Chairul_Vikri.rar', 70),
-(25, 'BA_2015_DimasRizkiAgusta.rar', '2018-03-18 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/BA_2015_DimasRizkiAgusta.rar', 60);
+(25, 'BA_2015_DimasRizkiAgusta.rar', '2018-03-18 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/BA_2015_DimasRizkiAgusta.rar', 60),
+(27, 'UIUX_2016_Ravi_Mahfunda.rar', '2018-03-19 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/UIUX_2016_Ravi_Mahfunda.rar', 82),
+(28, 'MP_2017_Rezky_Revindo1.rar', '2018-03-19 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/MP_2017_Rezky_Revindo1.rar', 36),
+(31, 'BA_2015_AbyanAriefFernandez.rar', '2018-03-20 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/BA_2015_AbyanAriefFernandez.rar', 148),
+(33, 'MP_2017_IQBAL_M.rar', '2018-03-20 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/MP_2017_IQBAL_M.rar', 153),
+(34, 'UIUX_2016_AhmadAlghozi.rar', '2018-03-20 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/UIUX_2016_AhmadAlghozi.rar', 155),
+(36, 'UIUX_2016_LINTANI_AFINA.rar', '2018-03-20 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/UIUX_2016_LINTANI_AFINA.rar', 41),
+(37, 'MP_2016_Ahmad_Muammar_Fanani1.rar', '2018-03-20 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/MP_2016_Ahmad_Muammar_Fanani1.rar', 159),
+(38, 'BA_2016_Syifa_Firdaus_Elvinggar.rar', '2018-03-20 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/BA_2016_Syifa_Firdaus_Elvinggar.rar', 109),
+(39, 'BA_2016_Gigas_Taufan_Arvyanto.rar', '2018-03-20 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/BA_2016_Gigas_Taufan_Arvyanto.rar', 137),
+(40, 'UIUX_2017_Ivan_Naufal_Islami_A.rar', '2018-03-20 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/UIUX_2017_Ivan_Naufal_Islami_A.rar', 40),
+(41, 'BA_2017_Maulana_Akbar_Dwijaya.rar', '2018-03-20 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/BA_2017_Maulana_Akbar_Dwijaya.rar', 161),
+(42, 'UIUX_2016_Muhamad_Fahmi_Fakhrezi1.rar', '2018-03-20 00:00:00', '/home/motionla/rekrutment.motionlaboratory.id/uploads/UIUX_2016_Muhamad_Fahmi_Fakhrezi1.rar', 50);
 
 -- --------------------------------------------------------
 
@@ -144,10 +164,10 @@ INSERT INTO `participants` (`id_users`, `student_id`, `name`, `id_line`, `minat`
 (34, '1104160154', 'Mahdy Syafiqa Jannata', 'safikka_', 'UI', 0, 'Laki-laki', '2016', 'mahdysyafiq160998@gmail.com', 1, 5, 1),
 (35, '1301174055', 'Alief Aditya Rachman', 'adityaalief', 'MP', 0, 'Laki-laki', '2017', 'aliefaditya39@gmail.com', 2, 8, 1),
 (36, '1303170035', 'Rezky Revindo', 'rezky.revindo', 'MP', 1, 'Laki-laki', '2017', 'rezkyrevindo3@gmail.com', 2, 10, 1),
-(37, NULL, 'Waskitha Ghaziadiyata', '', NULL, 0, 'Laki-laki', '', 'waskithag@gmail.com', NULL, NULL, 0),
+(37, '1301164178', 'Waskitha Ghaziadiyata', 'wghaziadiyata', 'MP', 0, 'Laki-laki', '2016', 'waskithag@gmail.com', 2, 8, 1),
 (38, '1301154447', ' Tio Renta Hutahaean', 'tiorentahutahaean', 'MP', 0, 'Perempuan', '2015', 'tiorentahutahaean1601@gmail.com', 2, 8, 1),
 (39, NULL, 'Adi Nugroho', '', NULL, 0, 'Laki-laki', '', 'adi.smarispat@gmail.com', NULL, NULL, 0),
-(40, '1301174318', 'Ivan Naufal Islami Al-faridzqi', 'ivannaufal07', 'UI', 0, 'Laki-laki', '2017', 'ivannaufal7@gmail.com', 2, 8, 1),
+(40, '1301174318', 'Ivan Naufal Islami Al-faridzqi', 'ivannaufal07', 'UI', 1, 'Laki-laki', '2017', 'ivannaufal7@gmail.com', 2, 8, 1),
 (41, '1301164005', 'Lintani Afina Hajar Raudhoti', 'lintaniafina', 'UI', 1, 'Perempuan', '2016', 'lintanilintani@gmail.com', 2, 8, 1),
 (43, '1202163246', 'Sultan arif ma\'ruf', 'Sultanarifma2', 'UI', 0, 'Laki-laki', '2016', 'sultanarifma@gmail.com', 3, 14, 1),
 (44, '1301170212', 'Joshua Galilea', 'jogagazz', 'BA', 0, 'Laki-laki', '2017', 'joga2322.jg@gmail.com', 2, 8, 1),
@@ -162,10 +182,9 @@ INSERT INTO `participants` (`id_users`, `student_id`, `name`, `id_line`, `minat`
 (55, '1301164555', 'Mia Sayida Fatma', 'miasayidaf', 'UI', 0, 'Perempuan', '2016', 'misayidaf@gmail.com', 2, 8, 1),
 (56, '1301164540', 'gary andersen', 'garyhtg', 'UI', 0, 'Laki-laki', '2016', 'garyhtg26@gmail.com', 2, 8, 1),
 (57, '1301170428', 'Muchamad Aqiel Hilman Maulandany', 'rickraze', 'MP', 0, 'Laki-laki', '2017', 'maqiel2600@gmail.com', 2, 8, 1),
-(58, NULL, 'Raya', '', NULL, 1, 'Laki-laki', '', 'raya.rahadian322@gmail.com', NULL, NULL, 0),
 (59, '1301164405', 'muhammad aniq wafa\'', '_mbergudeng', 'MP', 0, 'Laki-laki', '2016', 'aniqwafa2@gmail.com', 2, 8, 1),
 (60, '1301154128', 'Dimas Rizki Agusta', 'dimskiis', 'BA', 1, 'Laki-laki', '2015', 'dimski57@gmail.com', 2, 8, 1),
-(61, NULL, 'Almas bani agam ', '', NULL, 0, 'Laki-laki', '', 'almas.bani18@gmail.com', NULL, NULL, 0),
+(61, '1301174263', 'Almas bani agam ', 'agam_bani', 'UI', 0, 'Laki-laki', '2017', 'almas.bani18@gmail.com', 2, 8, 1),
 (62, '1301154177', 'Dewa Satria Wibowo', 'dewsatria', 'UI', 0, 'Laki-laki', '2015', 'satriadewa810@gmail.com', 2, 8, 1),
 (63, NULL, 'Gumilar Sulistian', '', NULL, 0, 'Laki-laki', '', 'gumilarsulistian@gmail.com', NULL, NULL, 0),
 (64, '1301154336', 'Muhammad Fathan', 'mhdfathan39', 'UI', 0, 'Laki-laki', '2015', 'mhdfathan39@gmail.com', 2, 8, 1),
@@ -178,20 +197,18 @@ INSERT INTO `participants` (`id_users`, `student_id`, `name`, `id_line`, `minat`
 (71, '1301164142', 'Fa\'iq Askhabi Ramadhan', 'askhabi017', 'UI', 0, 'Laki-laki', '2016', 'askhabi.faiq17@gmail.com', 2, 8, 1),
 (72, '1301174057', 'Aanisah Rifda Rusjdy', 'aarrifda', 'BA', 0, 'Perempuan', '2017', 'aarrifda@gmail.com', 2, 8, 1),
 (73, '1501150237', 'Eka Widandari', 'ekawede', 'BA', 0, 'Perempuan', '2015', 'Ekawidandari11@gmail.com', 5, 20, 1),
-(74, '1301150034', 'Rama Aditya Maulana', 'ramaadtym', 'MP', 1, 'Laki-laki', '2015', 'ramaadtym@gmail.com', 2, 8, 1),
 (76, NULL, 'Farhan Alfariqi', '', NULL, 0, 'Laki-laki', '', 'therealalfariqi@gmail.com', NULL, NULL, 0),
 (77, '1301154283', 'Aris Afrianto', 'arisafrianto0423', 'UI', 0, 'Laki-laki', '2015', 'arisafrianto23@gmail.com', 2, 8, 1),
 (79, '1202164189', 'Nur Latifah Prihartini', 'nlatifahp', 'BA', 0, 'Perempuan', '2016', 'nlatifah35@gmail.com', 3, 14, 1),
 (80, '1301162314', 'Muhammad Naufal Mukhbit Amrullah', 'nopayers', 'UI', 0, 'Laki-laki', '2016', 'nmukhbit@gmail.com', 2, 8, 1),
 (81, '1301154310', 'Mirza Aulia Rahman', 'mirzarhmn', 'UI', 0, 'Laki-laki', '2015', 'mirzarhmn3@gmail.com', 2, 8, 1),
-(82, NULL, 'Ravi Mahfunda', '', NULL, 0, 'Laki-laki', '', 'ravimahfunda@gmail.com', NULL, NULL, 0),
+(82, '6706164114', 'Ravi Mahfunda', 'ravmahfunda', 'UI', 1, 'Laki-laki', '2016', 'ravimahfunda@gmail.com', 7, 26, 1),
 (83, '1301154190', 'dhian haryono', 'dhibeks', 'UI', 0, 'Laki-laki', '2015', 'dhianharyono.dh@gmail.com', 2, 8, 1),
-(84, '1301164211', 'Gigas Taufan Arvyanto', 'gigastaufanarvyanto', 'BA', 0, 'Laki-laki', '2016', 'gigastaufan@yahoo.com', 2, 8, 1),
 (85, '6706161055', 'Hanif Khoirul Fathansyah', 'hanifkf12', 'MP', 0, 'Laki-laki', '2016', 'hanifkhoirulfathan@gmail.com', 7, 26, 1),
 (86, NULL, 'Nur Chairul Syam', '', NULL, 0, 'Laki-laki', '', 'chairulsyam07@gmail.com', NULL, NULL, 0),
 (87, '1202162356', 'Zayed Iffat Mahdi', 'zayed90', 'MP', 0, 'Laki-laki', '2016', 'zayediffatm12@gmail.com', 3, 14, 1),
 (88, '1301154479', 'Arwendy Y.S', 'wendyyunika', 'UI', 0, 'Perempuan', '2015', 'arwendy.ysda@gmail.com', 2, 8, 1),
-(89, NULL, 'Gangsar Yoga Pamungkas', '', NULL, 0, 'Laki-laki', '', 'gangsaryoga1996@gmail.com', NULL, NULL, 0),
+(89, '1301154096', 'Gangsar Yoga Pamungkas', 'gangsaryp', 'UI', 0, 'Laki-laki', '2015', 'gangsaryoga1996@gmail.com', 2, 8, 1),
 (90, '1301144054', 'Irvan Muhammad', 'crocospect', 'UI', 0, 'Laki-laki', '2014', 'irvanprototype@gmail.com', 2, 8, 1),
 (91, '1401164383', 'meuthia nabila pratiwi', 'meuthianabilapratiwi', 'BA', 0, 'Perempuan', '2016', 'meuthianabilapratiwi@gmail.com', 4, 18, 1),
 (92, '1301154113', 'Baginda Praka G', '17icecream', 'MP', 0, 'Laki-laki', '2015', 'conan.peace@gmail.com', 2, 8, 1),
@@ -200,28 +217,59 @@ INSERT INTO `participants` (`id_users`, `student_id`, `name`, `id_line`, `minat`
 (96, '1301154373', 'Dickri gumelar', 'dickriiigumlar', 'BA', 0, 'Laki-laki', '2015', 'dickri.gumelar07@gmail.com', 2, 8, 1),
 (97, '6706164075', 'AGUS FERY SUYATNA', 'ferysuyatna', 'MP', 0, 'Laki-laki', '2016', 'ferysuyatna08@gmail.com', 7, 26, 1),
 (98, '1103164200', 'Annisa Putri', 'ichacenatcenut', 'MP', 0, 'Perempuan', '2016', 'putriapriandi99@gmail.com', 1, 6, 1),
-(99, '1301164378', 'Muhammad Naufal Divian Muliawan', 'naufaldm', 'UI', 0, 'Laki-laki', '2016', 'naufal.divian@gmail.com', 2, 8, 1),
 (100, NULL, 'Budi Ali Supian', '', NULL, 0, 'Laki-laki', '', 'budialisupian96@gmail.com', NULL, NULL, 0),
-(101, NULL, 'Muhammad Fadhlan Supriadi', '', NULL, 0, 'Laki-laki', '', 'farahas1997@gmail.com', NULL, NULL, 0),
 (102, '1301164451', 'Galih Yudhasena Trenggala', 'galihyudha14', 'UI', 0, 'Laki-laki', '2016', 'galihtrenggala@gmail.com', 2, 8, 1),
 (103, NULL, 'adminadmin', '', NULL, 0, 'Laki-laki', '', 'admin@gmail.com', NULL, NULL, 0),
 (104, '1202160052', 'Thio Fauzi', '@thiofauzi', 'UI', 0, 'Laki-laki', '2016', '2technopark5@gmail.com', 3, 14, 1),
 (105, '1301164287', 'Megia Rahim', 'megiaa', 'BA', 0, 'Laki-laki', '2016', 'megia.rahim@gmail.com', 2, 8, 1),
 (106, '1301174010', 'Faisal Ridwan Siregar', 'faisalridwann', 'MP', 0, 'Laki-laki', '2017', 'faisalridwansiregar@gmail.com', 2, 8, 1),
-(107, '1301154327', 'Muhammad Adna Pradana ', 'Maprad', 'BA', 0, 'Laki-laki', '2015', 'Madnapradana@gmail.com', 2, 8, 1),
 (108, NULL, 'muh alif al gibran arif', '', NULL, 0, 'Laki-laki', '', 'alifalgibran147@gmail.com', NULL, NULL, 0),
-(109, NULL, 'Syifa Firdaus Elvinggar', '', NULL, 0, 'Perempuan', '', 'firdaelvinggar@gmail.com', NULL, NULL, 0),
+(109, '1501164190', 'Syifa Firdaus Elvinggar', 'firdaelvinggar', 'BA', 1, 'Perempuan', '2016', 'firdaelvinggar@gmail.com', 5, 20, 1),
 (110, NULL, 'irbah salsabila', '', NULL, 0, 'Perempuan', '', 'irbah.salsabila93@gmail.com', NULL, NULL, 0),
 (111, '1301164291', 'Anisa Septiani', 'anisas.', 'BA', 0, 'Perempuan', '2016', 'anisasptia@gmail.com', 2, 8, 1),
-(112, NULL, 'Eldi Rohmanur Ikhsan', '', NULL, 0, 'Laki-laki', '', 'eldirohmanur@gmail.com', NULL, NULL, 0),
-(114, NULL, 'Kharisma Oktavianing Herwanda', '', NULL, 0, 'Perempuan', '', 'kharisma.herwanda96@gmail.com', NULL, NULL, 0),
 (116, '1301164344', 'Muhammad Fadli Asshiddiqi', 'mfadlimaska', 'UI', 0, 'Laki-laki', '2016', 'Fadlimaska11@gmail.com', 2, 8, 1),
 (117, '1301154212', 'Rizaldi Yusuf', 'zalizaldiy44', 'UI', 0, 'Laki-laki', '2015', 'zalizaldiy@student.telkomuniversity.ac.id', 2, 8, 1),
 (118, '1202164364', 'Rizqi Prima Hariadhy', 'superizqiii', 'BA', 0, 'Laki-laki', '2016', 'rizqiphd@gmail.com', 3, 14, 1),
 (119, '6701174115', 'Rizsa El Akbar', 'rizsa_el', 'BA', 0, 'Laki-laki', '2017', 'rizsaelakbar99@gmail.com', 7, 27, 1),
 (120, '1301164165', 'Joel Andrew Montana Kriahenta Ginting', 'joelandrewgt', 'UI', 0, 'Laki-laki', '2016', 'joel.andrew22088@gmail.com', 2, 8, 1),
 (121, '1301160200', 'Mochammad Aria Putra Suwantra', 'moch_ariaa', 'UI', 0, 'Laki-laki', '2016', 'mocharia@student.telkomuniversity.ac.id', 2, 8, 1),
-(122, NULL, 'Dummy', '', NULL, 0, 'Laki-laki', '', 'dummy@gmail.com', NULL, NULL, 0);
+(122, NULL, 'Dummy', '', NULL, 0, 'Laki-laki', '', 'dummy@gmail.com', NULL, NULL, 0),
+(124, '1301154372', 'Hamzah Faisal Azmi', 'hamzahfaisala', 'BA', 0, 'Laki-laki', '2015', 'mantuajaib@gmail.com', 2, 8, 1),
+(125, '1301164057', 'Rahadian Yusuf Abdul Rahman', '5859378', 'BA', 0, 'Laki-laki', '2016', 'hadianyusuf@gmail.com', 2, 8, 1),
+(126, NULL, 'aprianil', '', NULL, 0, 'Perempuan', '', 'aprianilsestirangga@gmail.com', NULL, NULL, 0),
+(127, NULL, 'Falia Amalia', '', NULL, 0, 'Perempuan', '', 'faliaamalia25@yahoo.co.id', NULL, NULL, 0),
+(128, NULL, 'ALDI NAFI ALMAALI', '', NULL, 0, 'Laki-laki', '', 'aldinafy@gmail.com', NULL, NULL, 0),
+(130, NULL, 'Ravi Mahfunda', '', NULL, 0, 'Laki-laki', '', 'ravimahfunda@gmail.com', NULL, NULL, 0),
+(132, '1301151234', 'dummy123', 'ramaadtyms', 'BA', 1, 'Laki-laki', '2013', 'dummy@gmail.com', 1, 4, 1),
+(134, NULL, 'Iklima Apriani', '', NULL, 0, 'Perempuan', '', 'klima.apriani@gmail.com', NULL, NULL, 0),
+(136, '1101154307', 'Azhar Kautsar', 'azharkautsar96', 'UI', 0, 'Laki-laki', '2015', 'azharkautsar19@gmail.com', 1, 1, 1),
+(137, '1301164211', 'Gigas Taufan Arvyanto', 'gigastaufanarvyanto', 'BA', 1, 'Laki-laki', '2016', 'gigastaufan@gmail.com', 2, 8, 1),
+(138, '1301174523', 'Ilham Muhamad Nizar', 'ilhaamnizar', 'UI', 0, 'Laki-laki', '2017', 'ilhamnzrr21@gmail.com', 2, 9, 1),
+(139, '1102162021', 'ilham fauzia aditya', 'ilhamfauziaditya', 'MP', 0, 'Laki-laki', '2016', 'ilhamfauziaditya@gmail.com', 1, 3, 1),
+(140, '1301151234', 'Hehehehe', 'Hehehehe', 'UI', 0, 'Perempuan', '2013', 'hehe@hehe.hehe', 5, 22, 1),
+(141, '1303170018', 'Alifudin Fajar Malik', 'alifudin_fm', 'UI', 0, 'Laki-laki', '2017', 'alifudinfajar@gmail.com', 2, 10, 1),
+(142, '1301154313', 'Yoga Widi Pamungkas', 'yogawidhie', 'MP', 0, 'Laki-laki', '2015', 'yogawidi1@gmail.com', 2, 8, 1),
+(143, '1401164543', 'Gema Darmawan', 'gemadarmawan', 'BA', 0, 'Laki-laki', '2016', 'gemadarmawan00@gmail.com', 4, 18, 1),
+(146, '1301174616', 'I Putu Ananda Miarta Utama', 'miartananda', 'BA', 0, 'Laki-laki', '2017', 'miarta56@gmail.com', 2, 9, 1),
+(147, NULL, 'Julianto Hermawan', '', NULL, 0, 'Laki-laki', '', 'juliantoxiipa4@gmail.com', NULL, NULL, 0),
+(148, '1301150030', 'Abyan Arief Fernandez', 'abyarief15', 'BA', 1, 'Laki-laki', '2015', 'abyan.arief15@gmail.com', 2, 8, 1),
+(149, NULL, 'BAGAS ADI NUGROHO', '', NULL, 0, 'Laki-laki', '', 'bagasnugroho5@gmail.com', NULL, NULL, 0),
+(151, NULL, 'Vian Rasyid Diyatma', '', NULL, 0, 'Laki-laki', '', 'vianixa34@gmail.com', NULL, NULL, 0),
+(152, '1202152178', 'Ahmad Taufiq Hidayat', '089634067877', 'MP', 0, 'Laki-laki', '2015', 'ataufiq665@gmail.com', 3, 14, 1),
+(153, '1301170238', 'Iqbal Maulana', 'ibalmaulana9', 'MP', 1, 'Laki-laki', '2017', 'ibalmaulana9@gmail.com', 2, 8, 1),
+(154, '1301174500', 'Rachmadania Irmanita', 'rach_ir', 'MP', 0, 'Perempuan', '2017', 'rachmadaniairmanita@gmail.com', 2, 9, 1),
+(155, '6706162134', 'Ahmad Alghozi Ramadhan', 'alghozi21', 'UI', 1, 'Laki-laki', '2016', 'alghozi1911@gmail.com', 7, 26, 1),
+(156, '1301174252', 'Hariadi Adha Firmansyah', 'adhariadi', 'MP', 0, 'Laki-laki', '2017', 'hariadi.adha@gmail.com', 2, 8, 1),
+(157, NULL, 'Amelia Martha', '', NULL, 0, 'Perempuan', '', 'ameliamarth4@gmail.com', NULL, NULL, 0),
+(158, NULL, 'Gigas Taufan Arvyanto', '', NULL, 0, 'Laki-laki', '', 'gigastaufan@gmail.com', NULL, NULL, 0),
+(159, '1301160149', 'Ahmad Muammar Fanani', 'muammarfanani', 'MP', 1, 'Laki-laki', '2016', 'muammarfanani2@gmail.com', 2, 8, 1),
+(160, '1301164378', 'Muhammad Naufal Divian Muliawan', 'naufaldm', 'MP', 0, 'Laki-laki', '2016', 'naufal.divian@gmail.com', 2, 8, 1),
+(161, '1103174087', 'Maulana Akbar Dwijaya', 'chrt_akbar', 'BA', 1, 'Laki-laki', '2017', 'maulanaakbardwijaya@gmail.com', 1, 6, 1),
+(162, NULL, 'Muhammad Adli Rachman', '', NULL, 0, 'Laki-laki', '', 'adli.rahman23@gmail.com', NULL, NULL, 0),
+(163, '6701161007', 'Bella Sintya Dewi', 'bellasint', 'MP', 0, 'Perempuan', '2016', 'bellasd73@gmail.com', 7, 27, 1),
+(164, '1401164624', 'Dian Sasmita', 'diaansasmita', 'BA', 0, 'Perempuan', '2016', 'diansas0998@gmail.com', 4, 18, 1),
+(165, NULL, 'raya rahadian', '', NULL, 0, 'Laki-laki', '', 'raya.rahadian322@gmail.com', NULL, NULL, 0),
+(167, NULL, 'Rizsa El Akbar', '', NULL, 0, 'Laki-laki', '', 'anakrumahan96@gmail.com', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -364,7 +412,6 @@ INSERT INTO `users` (`id_users`, `username`, `password`, `last_login`) VALUES
 (39, 'adinugroho', '$2a$08$s0K6moClq9hdDxVXvAcMnuV104owD.0j/CZwaJo6rKhlpElq7jgoO', '2018-03-16 04:36:37'),
 (40, 'ivannaufal7', '$2a$08$A0ZPosU74ckJWTB84.vEduApw0RhK1JsByrFtxwJtxxfIYTf2RsfC', '2018-03-16 04:44:57'),
 (41, 'lintaniafina', '$2a$08$6q9zSLkvoEYLyaFNF8Ov9eH1d9tZOXc5hFvZcdX8iYgtothEeuUZG', '2018-03-17 08:59:03'),
-(42, 'lintaniafinadummy', '$2a$08$VCZYg02WtJQ0oSle2smNiuTJLnIKjupWTvXqlpOW8SLF4Lrjo2W0.', '2018-03-17 08:59:34'),
 (43, 'Sultanarifma', '$2a$08$nDxpFBi5nS2BCTJpwf412OE10HH0XWlsVHCPYYhfip7rltu2kclhG', '2018-03-16 04:53:01'),
 (44, 'JoGa', '$2a$08$n2g3qweA3/ClqpXYJpNK1uHNkiLh7/6EN1dXv2JJSUSS3JqYaLZOO', '2018-03-16 04:57:09'),
 (45, 'audiisra', '$2a$08$46fhGgrk4b6roUXqW9rjbumOecZEiy9FMy2F3Ga.6O.9VbLweqFyi', '2018-03-16 05:06:55'),
@@ -403,7 +450,6 @@ INSERT INTO `users` (`id_users`, `username`, `password`, `last_login`) VALUES
 (81, 'mirzarhmn', '$2a$08$3A2gEy7JTADnJnH3BCzyB.sHrIG8ETq/iEvoAnVunlYuUUKUWYWOS', '2018-03-17 03:17:41'),
 (82, 'ravimahfunda', '$2a$08$vxsTyRpKYYPzd81wXZLA0OIsf8BobJF7XyeMgMh8IL21Q/s5.d2PK', '2018-03-17 04:06:51'),
 (83, 'dhianharyono', '$2a$08$05LSEq0WW95Ugf6KvpCKbOivHvEr/lTgfvs006N4kkcQwG7UcocHS', '2018-03-17 04:27:59'),
-(84, 'gigastaufan', '$2a$08$vePnC1XfR..ialdAk3086OYZTSiNrFKSt9mztGdxO2fUxDtN424KG', '2018-03-17 05:04:17'),
 (85, 'hanifkf12', '$2a$08$74ItOYQEDyw/jzsB964kgubnDfDHnMIYQlMYHo0MAbT.mhrhlNgm.', '2018-03-17 06:11:53'),
 (86, 'nurchairulsyam', '$2a$08$DtuAKWHBuMdfdfchcaarXu.JyNASNWLRF9NgV1JChDAkZCJDpd.22', '2018-03-17 06:23:24'),
 (87, 'zayed0896', '$2a$08$yxeOuVI2W15YuMtYHTMvVuFSVMU7TRDMAAfXgv6tB07HhEy638DsC', '2018-03-17 06:30:56'),
@@ -417,7 +463,6 @@ INSERT INTO `users` (`id_users`, `username`, `password`, `last_login`) VALUES
 (96, 'Dickrigumelar', '$2a$08$N0lfE2ovI4F0Kp2j.uv8lunSICLGz0ZwSbs5PbW7YYUp0.86bf9LO', '2018-03-17 12:27:02'),
 (97, 'ferysuyatna', '$2a$08$nRdKhj.ZKB6leaJo1AbR0.8mRyIS14t15ZtC5CRmi8.OcidQSzJZq', '2018-03-17 12:44:36'),
 (98, 'putriapriandi99', '$2a$08$JTOgIyMaIUJEnUy5UB.zjOE/rgmDypQQi.CB7mX8o9fpdwOTIN.Qq', '2018-03-17 13:17:35'),
-(99, 'naufaldivian', '$2a$08$HxJ3rS3zX7Zvd8kr3DxsFOyVRq9zB/9XR88KGOf6RM/MWSJi9vdjy', '2018-03-17 13:24:31'),
 (100, 'budialis', '$2a$08$pKdrdiMpHJx.7rpb4uvWIeZsfZsElOKmYA1WihPcVyH1GedzfIhVS', '2018-03-17 14:18:42'),
 (101, 'fadhlan97', '$2a$08$de3xhdIfdhw/.ofWPINjb.0uFjdKdQnrh70XnfmSGVjgLRfme6.OG', '2018-03-17 15:06:36'),
 (102, 'galihyudha', '$2a$08$ah0IdKj94dv3RA3LwSUNA.Duo3DVhftYvvdqLbtWu8O5AR1TjrGXu', '2018-03-17 15:14:53'),
@@ -439,7 +484,51 @@ INSERT INTO `users` (`id_users`, `username`, `password`, `last_login`) VALUES
 (119, 'rizsaelakbar', '$2a$08$x/dx/kA0WO.RLwkziSpu8uk2FcBewxEbE2mEKG0TW/AFoNECJcsHS', '2018-03-18 17:08:17'),
 (120, 'joelandrew', '$2a$08$YXNcR5Qm.edhKTSprAoaC.jpOXbQWHXqYbQ2KueYfQ7XE3GeNhDMy', '2018-03-19 01:53:18'),
 (121, 'mocharia', '$2a$08$TDh7NCkUO.O/.wcCfxX6FuWhzw6csxCClHDJDq7inNszD9VfL5axy', '2018-03-19 02:04:32'),
-(122, 'dummy1234', '$2a$08$poDXcuB9CGnj7Ju61xPTXegD7Dc2AGRHT6irOFzbtJYEkCFAtuci6', '2018-03-19 02:17:03');
+(122, 'dummy1234', '$2a$08$poDXcuB9CGnj7Ju61xPTXegD7Dc2AGRHT6irOFzbtJYEkCFAtuci6', '2018-03-19 02:17:03'),
+(123, 'ryoalif1998', '$2a$08$LoQudN547ytXQ0QF6F9f5.oeV5q0IKNF0qF3q97phfQp/fRYjG1hW', '2018-03-19 02:43:09'),
+(124, 'mantuajaib', '$2a$08$xRu.ctfcOEt8mK5GpTd4jOOQssH2TqmzAoKKgmcSJOMX.p.UCfPfe', '2018-03-19 02:44:33'),
+(125, 'rahadian1234', '$2a$08$fhA3IvFj7yZ3goU0kYU79uQXyccpmAS7GhH2lXb1o8YW23hpC5RGe', '2018-03-19 03:45:05'),
+(126, 'aprianil', '$2a$08$FNREs6kiFWcTRKuA6JyTOu0K5NLUCDiJqZMz62V2NwC2lUBNORhsq', '2018-03-19 05:05:11'),
+(127, 'faliamaliaa', '$2a$08$eaLOUPpmQsSJ5swYjHN4Fev/iQCB3qmcCA0CITbGFTfjQu0BqmM1O', '2018-03-19 05:33:41'),
+(128, 'aldinafy', '$2a$08$4BPweNBnqYRGYzb8br8EaOMbfylCIw8GW/pIQ9tpkMlAZ9oAFGi4W', '2018-03-19 06:48:37'),
+(129, 'ifalghifary', '$2a$08$p9cl3/rwr31kEaAM5yVUcOapro5bifjaxhPLpUn5peE7VUHmjP6aa', '2018-03-19 06:50:09'),
+(130, 'ravimahfunda', '$2a$08$e24zM6hPRl7PPtgffpnezul/rKKEhATQxwV9TyPvOKk6meY8I3ZOK', '2018-03-19 07:09:28'),
+(131, 'irwanafandi', '$2a$08$dzYszFROBb27kb7BxykoTeqot58EToOk8k0ceIEmfJuAko7LZsLWO', '2018-03-19 08:40:25'),
+(132, 'dummy123', '$2a$08$422Ro9GQerf.jFghAQ3k/OnhkcAPjsnD.3FsdmwEQlvPV6ce42dGK', '2018-03-19 08:54:22'),
+(133, 'ritajengnugraheni', '$2a$08$saxjbMhhYr4aJ6ajMr/0veqhuzDcvC28RHTwcrFKydiTKXUhLqxNi', '2018-03-19 10:17:32'),
+(134, 'iklimmaa', '$2a$08$LXr5se.QUhY.ZhV/srXSNutbiY3CRJG8p5SlsEzKmUq5ZpgGNebVq', '2018-03-19 11:16:13'),
+(135, 'vatanasweety', '$2a$08$LDki.UlweeTX6mPz7PLIPO01WiyhhIdg7z8/wW3TFeyQjbJ5Xt8xi', '2018-03-19 11:53:47'),
+(136, 'azharkautsar', '$2a$08$/2X3hvL7xSHvZt4B/pDHy.3UnsnKabwhQpdM5igdhEXGmQ9SVHFaS', '2018-03-19 13:00:20'),
+(137, 'gigastaufan', '$2a$08$1cR74ySICOfteKu7ZMal0OgvFXVcryiutRyWsYKVkOWnYxIZm3KKK', '2018-03-19 15:08:43'),
+(138, 'ilhaamnizar', '$2a$08$a4xB7Oyx6XGEbSM6OqRMa.Cv99qsHbjXIQdjoBg7OJcz9gAVG01v.', '2018-03-19 15:42:24'),
+(139, 'ilhamfauziaditya', '$2a$08$TxHwx2mIkSQGbRRLtHWZBeukZxXDhiFwdNGab64MgSZs/HZRa6AUy', '2018-03-20 00:14:31'),
+(140, 'Hehehehe', '$2a$08$2avQ6MR2VtoNINHxh831iun1xpkdqwMNVgwYjq4g9S9I1mK8J4gpi', '2018-03-20 00:38:53'),
+(141, 'alifudinfm', '$2a$08$XF22.FQBqhh9FgF2mhyIwuTae.NQWwm7QIwU6q361k4eVaiWyDSRK', '2018-03-20 02:17:10'),
+(142, 'yogawidi', '$2a$08$.hmffbOABgebnIPyewWjFux2sXBaV0z3rZOhTXRZvZ5HNepeUpyLq', '2018-03-20 02:47:26'),
+(143, 'gemadarmawan', '$2a$08$nReuhQoP5QsmNhYuxgjFHOlbVhJ/MbyHTELYrelN32VasjccuvsPe', '2018-03-20 02:55:13'),
+(144, 'ranggar53', '$2a$08$tvS9d72E4LFSRr6/Fgdmzeh.hBNA5ihtFRPT3sIjTPVy86icDIuN2', '2018-03-20 04:09:01'),
+(145, 'ranestari', '$2a$08$ztb75xSrUjZEXy36rvOD2.zJ47Eh3JMU8V1a3rCDwuKRRDNSXARfq', '2018-03-20 04:16:36'),
+(146, 'Anandamiarta', '$2a$08$yRIWb3AzcuL8rwIAgp0gWeMtBO.l/jxsb3od92ue/hqcpVKyuCc9C', '2018-03-20 04:38:14'),
+(147, 'jhermawan', '$2a$08$T3Fn9fh2Mi3tcTLuIxENduO49wKKDHntqSbixEtIxhHKcMkbi6HRC', '2018-03-20 04:40:04'),
+(148, 'Abyarief15', '$2a$08$pDcN8sE4zpygF.Ao.g5iruMISYUzCZL7FbIoK3c9gVKvKTkRwKnvu', '2018-03-20 05:14:59'),
+(149, 'bagasadinugroho', '$2a$08$dv/uGV0i6JuGTEylF1a5HeNY/GiUqIEXhP18Cejq8pWJ9DtQipex6', '2018-03-20 05:22:14'),
+(151, 'vianrd009', '$2a$08$LH8UI6lGhMmrMInEK/aMO.o8jMuruqApnulcYjkD3BJ7KmboC6R62', '2018-03-20 05:47:56'),
+(152, 'ataufiq123', '$2a$08$.7JmHidE8FX/Jt59NUQBT.jIxqjDyUfxJ7E/yc/wSfF.P.xHiRQR2', '2018-03-20 05:49:20'),
+(153, 'ibalmaulana9', '$2a$08$p6GQP1UEl.XaZBcqJA6rHeHsd34AvoegQS.zftVo3qfifTy0r2nKe', '2018-03-20 06:30:46'),
+(154, 'rachmadania', '$2a$08$i8GxCAtTpcehl7Q0LjqN.uYtY1xdF9c5n3QOfBHWLjiafpOFt1QzW', '2018-03-20 06:48:22'),
+(155, 'ahmadalghozi', '$2a$08$Pnsh4.3lyiBP8oyvtpgmDe9jhDMrFCvgZHjoz0dfTqkFgAoqRhDJG', '2018-03-20 07:15:59'),
+(156, 'hariadiaf', '$2a$08$eKsTH3ZZT7d/A5nwOdFDfuaaYuPozuRXGrlpYqM3s3QvGNDuIQuqO', '2018-03-20 07:17:17'),
+(157, 'ameliamartha', '$2a$08$ipRP62iXV8xwxpm..tbxd.WHBVp1TL.h4muHuGBYDzq1TkBE4Hxda', '2018-03-20 08:41:15'),
+(158, 'gigastaufan', '$2a$08$kEWisF/Wi3qMeOq/avOek.l/NWEpa7h3P2byDv5I1EaOiPyLfFUXW', '2018-03-20 09:59:30'),
+(159, 'muammarf', '$2a$08$gRcEcf02baeaFP10O7KPTOoqHf2ZRBdHLVDn02KPtIIqmCRJ4p25G', '2018-03-20 10:06:37'),
+(160, 'naufaldivianm', '$2a$08$jQgkBrW.ypo73FdwQWKshOY0TWtQmpY0/2MAOpy7dEW95KS//RDqe', '2018-03-20 10:20:51'),
+(161, 'maulanaakbardwijaya', '$2a$08$rfeBDd8jeRLnd/l.gOtE1uvGalwuRRj0ib4Tobeg9gvWQzKXGnlP6', '2018-03-20 12:12:57'),
+(162, 'adlirachman', '$2a$08$L.drYQVtlO5dxmDLX7On5.wYIu3nWFLXNwahDL64xoBHJPx8cqwly', '2018-03-20 12:34:08'),
+(163, 'bellasintya', '$2a$08$xkBoA/OQs/8IiRF9V5AYFey4Qe7RrcW12zIlNvqh2ocT1lbPxSDcG', '2018-03-20 13:36:18'),
+(164, 'Diansasmita', '$2a$08$h8Tyme.Hf1.1trgVo4pDDe5LJKoujzcnNxIMwWkzZLvx6/mBmaU1m', '2018-03-20 13:52:51'),
+(165, 'rayarahadian', '$2a$08$zoiDFPyp13bOi.uKt4Ti6.jPT6prQez761QSlSuH.AbMvU3kQYuZq', '2018-03-20 13:56:27'),
+(166, 'muhalifalgibran', '$2a$08$3zXioqAVonFREuDIAWT/3O4SmA6m.I.JXSKRoJjvunvuliLhhWBTq', '2018-03-20 13:57:49'),
+(167, 'rizsaelakbar', '$2a$08$J2Lq.2Fm66/v7pz32c33puMeTGsYZ1NFmULUIVfoJNYziEcaEPz8i', '2018-03-20 14:39:07');
 
 --
 -- Indexes for dumped tables
@@ -525,13 +614,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
+  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
 
 --
 -- AUTO_INCREMENT for table `berkas`
 --
 ALTER TABLE `berkas`
-  MODIFY `id_berkas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_berkas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `fakultas`
@@ -543,7 +632,7 @@ ALTER TABLE `fakultas`
 -- AUTO_INCREMENT for table `participants`
 --
 ALTER TABLE `participants`
-  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
 
 --
 -- AUTO_INCREMENT for table `pengaturan`
@@ -579,7 +668,7 @@ ALTER TABLE `tahapsatu`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
 
 --
 -- Constraints for dumped tables

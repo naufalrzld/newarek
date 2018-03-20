@@ -105,5 +105,19 @@ class Functions extends MY_Controller
 
         redirect('Daftar/Unggah');
     }
+    public function removeBerkas($id_users){
+        if ($this->session->userdata("logged_in")){
+      $this->db->where("md5(id_users)",$id_users);
+      $query = $this->db->get("berkas");
+      if ($query->num_rows() > 0){
+         $berkas = $query->result_array()[0];
+         $path = './uploads/';
+         unlink($path . $berkas['nama_berkas']);
+         $this->db->where("md5(id_users)",$id_users);
+         $this->db->delete("berkas");
+      }
+            }
+      redirect("Panitia/viewBerkas",'refresh');
+    }
 
 }

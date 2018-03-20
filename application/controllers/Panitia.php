@@ -32,7 +32,7 @@ class Panitia extends MY_Controller {
 		$data['all'] = $getAll['total'];
 		$this->panitia('laman/adm/v_dash',$data);
 	}
-    
+
 	public function allUsers(){
 		 if (!$this->session->userdata("logged_in")){
             redirect("Panitia");
@@ -56,7 +56,7 @@ class Panitia extends MY_Controller {
         $data['nama'] = $get['real_name'];
 		$data['status'] = $get['status'];
 		if($status == "super admin"){
-            $this->panitia('laman/adm/v_berkas',$data);
+            $this->panitia('laman/adm/v_add',$data);
         }
         else{
         	redirect("Panitia/Dashboard");

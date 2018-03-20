@@ -12,6 +12,7 @@
                     <a class="dropdown-item" href="<?php echo base_url().'Info/Alur';?>">Alur Rekrutmen</a>
                     <a class="dropdown-item" href="<?php echo base_url().'Info/Syarat';?>">Persyaratan & Mekanisme</a>
                     <a class="dropdown-item" href="<?php echo base_url().'Info/Minat';?>">Profil Peminatan</a>
+                    <a class="dropdown-item" href="<?php echo base_url().'uploads/Letter For Motion_Nama Lengkap.docx';?>" target="_blank">Download Letter For Motion Template</a>
                 </div>
             </li>
             <li class="nav-item dropdown jarak">

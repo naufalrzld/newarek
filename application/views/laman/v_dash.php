@@ -23,6 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </p>
             <?php if($status_isi==0){?>
                 <a href="<?php echo base_url().'Daftar'?>" class="btn btn-danger btn-md btn_daftar">Daftar &rarr;</a>
+              
             <?php } else{?>
                 <a href="<?php echo base_url().'Profile'?>" class="btn btn-danger btn-md btn_daftar">Lihat Data &rarr;</a>
             <?php }?>
