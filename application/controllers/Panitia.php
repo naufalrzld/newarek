@@ -183,4 +183,28 @@ class Panitia extends MY_Controller {
 		$this->M_timeline->delete($id);
 		redirect('Panitia/timeline');
 	}
+
+	public function pengumuman() {
+		if (!$this->session->userdata("logged_in")){
+            redirect("Panitia");
+        }
+		$id = $this->session->userdata('id'); 
+		$get = $this->M_admin->getDetailAdmin($id);
+		$data['ui'] = $this->M_admin->getAllParticipantsByMinat('UI');
+		$data['mp'] = $this->M_admin->getAllParticipantsByMinat('MP');
+		$data['ba'] = $this->M_admin->getAllParticipantsByMinat('BA');
+		$data['status'] = $get['status'];
+		$data['nama'] = $get['real_name'];
+		$this->panitia('laman/adm/v_pengumuman',$data);
+	}
+
+	public function penerimaan() {
+		if (!$this->session->userdata("logged_in")){
+            redirect("Panitia");
+		}
+		$tahap = $this->input->post("tahap");
+		$check = $this->input->post("terima_ui");
+
+		
+	}
 }

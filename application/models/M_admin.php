@@ -59,6 +59,16 @@ class M_admin extends CI_Model{
 
     	return $query;
     }
+    public function getAllParticipantsByMinat($minat){
+        $query = "SELECT * from participants p
+        JOIN fakultas f ON (p.fakultas = f.id_fakultas)
+        JOIN prodi pr ON (p.program = pr.id_prodi)
+        JOIN berkas b on (b.id_users = p.id_users)
+        WHERE minat = '$minat'
+        ORDER BY name ASC";
+
+    	return $this->db->query($query)->result_array();
+    }
     public function hpsUser($id){
     	$q = $this->db->delete('users', array('id_users' => $id));
     	return $q;

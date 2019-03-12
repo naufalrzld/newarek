@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="card-body">
                 <h3 class="card-title count"><?php echo $all;?></h3>
                 <p class="card-text org"></p>
-                <p class="card-text print_saran">*Data termasuk yang belum melengkapi formulir</p> 
+                <p class="card-text print_saran">*Data yang sudah upload berkas</p>
               </div>
             </div>
         </div>
