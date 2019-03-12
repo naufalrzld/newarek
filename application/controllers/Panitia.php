@@ -205,6 +205,39 @@ class Panitia extends MY_Controller {
 		$tahap = $this->input->post("tahap");
 		$check = $this->input->post("terima_ui");
 
+		//echo count($check);
+		
+		if($tahap == '1'){
+			for($counter = 0; $counter < count($check); $counter++){
+				echo 'tes';
+				$this->M_admin->kelulusan($tahap,$check[$counter]);
+			}
+		}elseif($tahap == '2'){
+			for($counter = 0; $counter < count($check); $counter++){
+				echo 'tes';
+				$this->M_admin->kelulusan($tahap,$check[$counter]);
+			}
+		}elseif($tahap == '3'){
+			for($counter = 0; $counter < count($check); $counter++){
+				echo 'tes';
+				$this->M_admin->kelulusan($tahap,$check[$counter]);
+			}
+		}elseif($tahap == '4'){
+			for($counter = 0; $counter < count($check); $counter++){
+				echo 'tes';
+				$this->M_admin->kelulusan($tahap,$check[$counter]);
+			}
+		}else{
+			echo 'alert()';
+		}
+			
+			
+		
+		echo '<br>';
+		echo '<br>';
+	//	echo $tahap;
+		echo '<br>';
+	//	print_r($check[9]);
 		
 	}
 }

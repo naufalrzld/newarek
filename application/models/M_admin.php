@@ -88,6 +88,49 @@ class M_admin extends CI_Model{
         $this->db->insert('admin',$dataAdm);
         $this->db->delete('participants', array('id_users' => $id));
     }
+    
+    public function kelulusan($tahap,$id_peserta){
+        $data = array(
+            'status_t1' => 'Lulus',
+            'pj_nilai' => $this->session->userdata('id')
+        );
+        if($tahap == '1'){
+            $data2 = array(
+                'id_users' => $id_peserta,
+                'tahap1' => 'Lulus'
+            );
+            $this->db->replace('penilaian', $data2);
+         //   $this->db->insert('tahapsatu', $data);
+        }elseif($tahap == '2'){
+            $data2 = array(
+                'id_users' => $id_peserta,
+                'tahap1' => 'Lulus',
+                'tahap2' => 'Lulus'
+            );
+            $this->db->replace('penilaian', $data2);
+         //   $this->db->insert('tahapsatu', $data);
+        }elseif($tahap == '3'){
+            $data2 = array(
+                'id_users' => $id_peserta,
+                'tahap1' => 'Lulus',
+                'tahap2' => 'Lulus',
+                'tahap3' => 'Lulus'
+            );
+            $this->db->replace('penilaian',$data2);
+            
+         //   $this->db->insert('tahapsatu', $data);
+        }elseif($tahap == '4'){
+            $data2 = array(
+                'id_users' => $id_peserta,
+                'tahap1' => 'Lulus',
+                'tahap2' => 'Lulus',
+                'tahap3' => 'Lulus',
+                'tahap4' => 'Lulus'
+            );
+            $this->db->replace('penilaian', $data2);
+         //   $this->db->insert('tahapsatu', $data);
+        }
+    }
 }
 
 ?>
