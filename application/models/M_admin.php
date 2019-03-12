@@ -32,30 +32,20 @@ class M_admin extends CI_Model{
         return $query;
     }
     public function getBA(){
-    	$this->db->select('count(*) AS totalBA');
-    	$this->db->where('minat','BA');
-    	$query = $this->db->get('participants')->row_array();
-    	return $query;
+    	$query = "SELECT COUNT(*) as totalBA from participants p JOIN berkas b on (p.id_users=b.id_users) WHERE p.minat = 'BA'";
+        return $this->db->query($query)->row_array();
     }
-     public function getMP(){
-    	$this->db->select('count(*) AS totalMP');
-    	$this->db->where('minat','MP');
-    	$query = $this->db->get('participants')->row_array();
-    	return $query;
+    public function getMP(){
+        $query = "SELECT COUNT(*) as totalMP from participants p JOIN berkas b on (p.id_users=b.id_users) WHERE p.minat = 'MP'";
+        return $this->db->query($query)->row_array();
     }
      public function getUI(){
-    	$this->db->select('count(*) AS totalUI');
-    	$this->db->where('minat','UI');
-    	$query = $this->db->get('participants')->row_array();
-    	return $query;
+    	$query = "SELECT COUNT(*) as totalUI from participants p JOIN berkas b on (p.id_users=b.id_users) WHERE p.minat = 'UI'";
+        return $this->db->query($query)->row_array();
     }
     public function getCountAllParticipants(){
-    	$this->db->select('count(*) AS total');
-    	// $this->db->where('minat','UI');
-    	// $this->db->or_where('minat','MP');
-    	// $this->db->or_where('minat','BA');
-    	$query = $this->db->get('participants')->row_array();
-    	return $query;
+        $query = "SELECT COUNT(*) AS total from participants p JOIN berkas b on (p.id_users=b.id_users)";
+    	return $this->db->query($query)->row_array();
     }
     public function getAllParticipants(){
     	$this->db->select('*');

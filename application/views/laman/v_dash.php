@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <p class="subtitle">di halaman resmi rekrutmen motion <?php echo date("Y");?></p>
             <div class="grs_welcome"></div>
             <p class="content_welcome">
-                Semua proses rekruitasi calon member atau member baru Mobile Innovation Laboratory 2018 akan melalui website ini. Selamat mengikuti proses rekruitasi.
+                Semua proses rekruitasi calon member atau member baru Mobile Innovation Laboratory 2019 akan melalui website ini. Selamat mengikuti proses rekruitasi.
                 “Every Movement is Motion !!”
             </p>
             <?php if($status_isi==0){?>
@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
                 <div class="card-body">
-                   <?php $this->load->view('menu/timeline');?>
+                   <?php $this->load->view('menu/timeline', $timeline);?>
                 </div>
             </div>
         </div>

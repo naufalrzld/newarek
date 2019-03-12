@@ -15,13 +15,17 @@ class M_regis extends CI_Model{
 		
 	}
 	public function viewDetailsProfile($id){
-        $sql = "SELECT name,nama_prodi,nama_fakultas,gender,angkatan,id_line,minat,student_id,last_login,status_paspor from participants p
+		$sql = "SELECT name,nama_prodi,nama_fakultas,gender,angkatan,id_line,minat,student_id,last_login from participants p
 JOIN fakultas f on (f.id_fakultas = p.fakultas)
 JOIN prodi pr on (pr.id_prodi = p.program)
 JOIN users using (id_users)
 where p.id_users = $id";
-     	$kue = $this->db->query($sql)->result_array()[0];
-        return $kue;
+	$query = $this->db->query($sql);
+	if ($query->num_rows() != 0) {
+		return $query->result_array()[0];
+	} else {
+		return false;
+	}
 	}
 	public function tambahBerkas($file_details,$id){
         $data = array(

@@ -40,6 +40,7 @@
                     Pengumuman
                 </a>
                 <div class="dropdown-menu utama" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="<?php echo base_url().'Panitia/timeline';?>">Timeline</a>
                     <a class="dropdown-item" href="#">Berita Penting</a>
                     <a class="dropdown-item" href="#">Pengumuman Tahap 1</a>
                     <a class="dropdown-item" href="#">Pengumuman Final</a>

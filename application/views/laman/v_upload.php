@@ -59,17 +59,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li>
                         Kartu Hasil Studi
                         <ul>
-                            <li>Angkatan 2015: Semester 1 s.d. 5</li>
-                            <li>Angkatan 2016: Semester 1 s.d. 3</li>
-                            <li>Angkatan 2017: Semester 1</li>
+                            <li>Angkatan 2016: Semester 1 s.d. 5</li>
+                            <li>Angkatan 2017: Semester 1 s.d. 3</li>
+                            <li>Angkatan 2018: Semester 1</li>
                         </ul>
                      </li>
-                     <li>Surat Untuk Motion <span class="ket_format">dalam format Pdf</span></li>
-                     <li>Pas Foto <span class="ket_format">4 x 6 berwarna, .jpg</span></li>
-                     <li>Sertifikat Kompetisi*<span class="ket_format">dalam format Pdf</span></li>
+                     <li>Surat Untuk Motion <span class="ket_format">Maks. 1 lembar A4 dalam format Pdf</span></li>
+                     <li>Foto Bebas <span class="ket_format">Ukuran 4R berwarna, .jpg</span></li>
+                     <!-- <li>Sertifikat Kompetisi*<span class="ket_format">dalam format Pdf</span></li> -->
                      <li>Portofolio* <span class="ket_format">dalam format Pdf</span></li>
                 </ol>
-                <p class="bintang">*Tidak Wajib</p>
+                <p class="bintang">*Optional</p>
                 </div>
             </div>
 

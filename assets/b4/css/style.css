@@ -432,6 +432,9 @@ a.logout_btn:hover:after{
 .detail_user{
     line-height: 0.5;
 }
+.paragraf{
+    line-height: 1;
+}
 .line_acc{
     color: #8BC34A;
 }

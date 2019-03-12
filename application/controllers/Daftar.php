@@ -49,7 +49,6 @@ class Daftar extends MY_Controller
         $berkas = $this->db->get('berkas');
         $detil = $this->M_User->getDetailById($id_users);
 
-
         if ($berkas->num_rows() == 0) {
             $data['nama_user'] = $detil['name'];
             $data['fakultas'] = $this->db->get('fakultas')->result_array();
@@ -58,7 +57,7 @@ class Daftar extends MY_Controller
             $this->laman('laman/v_upload', $data);
         }
         else {
-            $this->session->set_flashdata('oops', 'Anda telah mengunggah berkas, silahkan mencetak paspor');
+            $this->session->set_flashdata('oops', 'Anda telah mengunggah berkas');
             $this->session->set_flashdata('jenisalert','alert-info');
             redirect("Profile");
         }

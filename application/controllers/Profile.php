@@ -21,6 +21,11 @@ class Profile extends MY_Controller {
 		// $detil = $this->M_User->getDetailById($id_users);
 		// echo $id_users;
 		$detil  = $this->M_Regis->viewDetailsProfile($id_users);
+		if (!$detil) {
+			$this->session->set_flashdata('oops', 'Silahkan lengkapi data diri anda terlebih dahulu!');
+            $this->session->set_flashdata('jenisalert','alert-info');
+			redirect("Daftar");
+		}
         $this->db->where('id_users',$id_users);
         $berkasnya = $this->db->get("berkas");
         if ($berkasnya->num_rows() > 0)
@@ -37,7 +42,6 @@ class Profile extends MY_Controller {
 			'line' => $detil['id_line'],
 			'minat' => $detil['minat'],
 			'angk' => $detil['angkatan'],
-			'paspor' => $detil['status_paspor'],
             'berkas' => $id_berkas
         );
 		// $data['nama_user'] = $detil['name'];

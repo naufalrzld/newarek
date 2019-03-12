@@ -8,6 +8,7 @@ class Panitia extends MY_Controller {
         //Do your magic here
         $this->load->model('M_admin');
         $this->load->model('M_berkas');
+        $this->load->model('M_timeline');
     }
 
 	public function index(){
@@ -45,7 +46,7 @@ class Panitia extends MY_Controller {
 		$this->panitia('laman/adm/v_users',$data);
 	}
 	public function addComittee(){
-		 if (!$this->session->userdata("logged_in")){
+		if (!$this->session->userdata("logged_in")){
             redirect("Panitia");
         }
         $id = $this->session->userdata('id'); 
@@ -122,5 +123,64 @@ class Panitia extends MY_Controller {
 
 	}
 
+	public function timeline() {
+		if (!$this->session->userdata("logged_in")){
+            redirect("Panitia");
+		}
+		$id = $this->session->userdata('id');
+        $get = $this->M_admin->getDetailAdmin($id);
+		$data['usr'] = $this->M_admin->getAllParticipants();
+		$data['status'] = $get['status'];
+		$data['nama'] = $get['real_name'];
+		$data['timeline'] = $this->M_timeline->getTimeLine();
+		$this->panitia('laman/adm/v_timeline',$data);
+	}
 
+	public function addTimeline() {
+		if (!$this->session->userdata("logged_in")){
+            redirect("Panitia");
+		}
+		
+		$kegiatan = $this->input->post("kegiatan");
+		$tanggal_mulai = $this->input->post("tanggal_mulai");
+		$tanggal_selesai = $this->input->post("tanggal_selesai");
+
+		$data = array(
+			"kegiatan" => $kegiatan,
+			"tanggal_mulai" => $tanggal_mulai,
+			"tanggal_selesai" => $tanggal_selesai
+		);
+
+		$this->M_timeline->addNewTimeline($data);
+		redirect('Panitia/timeline','refresh');
+	}
+
+	public function editTimeline() {
+		if (!$this->session->userdata("logged_in")){
+            redirect("Panitia");
+		}
+		
+		$id = $this->input->post("id");
+		$kegiatan = $this->input->post("kegiatan");
+		$tanggal_mulai = $this->input->post("tanggal_mulai");
+		$tanggal_selesai = $this->input->post("tanggal_selesai");
+
+		$data = array(
+			"kegiatan" => $kegiatan,
+			"tanggal_mulai" => $tanggal_mulai,
+			"tanggal_selesai" => $tanggal_selesai
+		);
+
+		$this->M_timeline->edit($id, $data);
+		redirect('Panitia/timeline','refresh');
+	}
+
+	public function deleteTimeline(){
+		if (!$this->session->userdata("logged_in")){
+            redirect("Panitia");
+		}
+		$id = $this->uri->segment(3);
+		$this->M_timeline->delete($id);
+		redirect('Panitia/timeline');
+	}
 }

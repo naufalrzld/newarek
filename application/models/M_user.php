@@ -26,10 +26,25 @@ class M_user extends CI_Model{
         return $query->result_array()[0];
     }
     */
-       public function getDetailById($id_users){
+    public function getDetailById($id_users){
         $this->db->where('participants.id_users', $id_users);
         $this->db->join('users', 'participants.id_users = users.id_users');
         $query = $this->db->get('participants')->result_array()[0];
+        if($query == NULL){
+            return false;
+        }else{
+            return $query;
+        }
+    }
+
+    public function getDetailUserById($id_users) {
+        $sql = "SELECT p.student_id, p.name, p.id_line, p.minat, p.gender, p.angkatan, p.email, pr.nama_prodi, f.nama_fakultas from participants p
+        JOIN fakultas f on (f.id_fakultas = p.fakultas)
+        JOIN prodi pr on (pr.id_prodi = p.program)
+        JOIN users using (id_users)
+        where p.id_users = $id_users";
+
+	    $query = $this->db->query($sql)->result_array()[0];
         if($query == NULL){
             return false;
         }else{

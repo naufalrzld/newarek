@@ -9,6 +9,7 @@ class Home extends MY_Controller {
 		$this->load->model('M_User');
 		$this->load->model('M_Regis');
 		$this->load->model('M_admin');
+		$this->load->model('M_timeline');
 		error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 	}
 	public function index()
@@ -17,7 +18,7 @@ class Home extends MY_Controller {
             redirect("/");
         }
         if($this->session->userdata('status') == "admin" || $this->session->userdata('status') == "super admin" ){
-        	 $this->session->set_flashdata('akses', 'Anda tidak memiliki akses');
+			$this->session->set_flashdata('akses', 'Anda tidak memiliki akses');
         	redirect('Panitia/Dashboard','refresh');
         }
 		$id_users = $this->session->userdata('id');
@@ -34,7 +35,8 @@ class Home extends MY_Controller {
 		$data['nama_user'] = $detil['name'];
 		$newDate = date("D, d/M/Y", strtotime($detil['last_login']));
 		$data['last_login'] = $newDate;
-		$data['status_isi'] = $detil["status_bio"];	
+		$data['status_isi'] = $detil["status_bio"];
+		$data['timeline'] = $this->M_timeline->getTimeLine();
         $this->laman('laman/v_dash',$data);
         }
 	}

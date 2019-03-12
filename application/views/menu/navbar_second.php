@@ -22,7 +22,7 @@
                 <div class="dropdown-menu utama" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="<?php echo base_url().'Daftar';?>">Form Biodata Diri</a>
                     <a class="dropdown-item" href="<?php echo base_url().'Daftar/Unggah';?>">Form Upload Berkas</a>
-                    <a class="dropdown-item" href="<?php echo base_url().'Profile';?>">Cetak Paspor</a>
+                    <a class="dropdown-item" href="<?php echo base_url().'Profile';?>">Profile</a>
                 </div>
             </li>
             <li class="nav-item dropdown jarak">

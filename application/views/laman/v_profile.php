@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     		  </div> -->
     		</div>
     	</div>
-    	<div class="col-6 detail_user">
+    	<div class="col-8 detail_user">
     		<h2 class="namanya"> <?php echo $nama_user;?></h2>
             <p><?php echo $nim." - ".$gender." | id Line: "?> 
                 <span>
@@ -59,20 +59,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 }
                 echo $berkas;?>
             </p>
-           <p>Status Cetak Paspor: 
-                <?php 
-                if($paspor == 0){
-                    $paspor =  "Belum mencetak";
-
-                }else{
-                    $paspor =  "Sudah mencetak";
-                }
-                echo $paspor;?>
-                    
-            </p>
             <p> Status Registerasi:
                 <?php 
-                if($paspor == "Sudah mencetak"){
+                if($berkas == "Sudah Mengunggah Berkas"){
                   echo "Sudah Selesai";
                 }else{
                     echo "Belum Selesai";
@@ -81,17 +70,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </p>
             <?php
             if($berkas != "Belum Unggah Berkas"){
-            ?>   
-            <a href="<?php echo base_url().'Paspor';?>" class="btn btn-danger btn-block" role="button" target="_blank">Cetak Paspor</a>
+            ?>
+            <p class="paragraf">Silahkan download applikasi android kami di <a href="#">bit.ly/blablaba</a> untuk memudahkan kalian dalam informasi seputar rekrutasi. Untuk pengguna iPhone mohon maaf kami belum bisa menyediakan aplikasinya, untuk informasi tentang rekrutasi bisa di cek melalui website.</p>
+            <!-- <a href="<?php echo base_url().'Paspor';?>" class="btn btn-danger btn-block" role="button" target="_blank">Cetak Paspor</a>
 
-            <p class="print_saran">*Disarankan menggunakan Browser Chrome untuk mencetak paspor</p>
+            <p class="print_saran">*Disarankan menggunakan Browser Chrome untuk mencetak paspor</p> -->
             <?php } ?>
     	</div>
 	</div>
-    <div class="row bg_howto">
+    <!-- <div class="row bg_howto">
         <div class="col-8 mx-auto">
              <img src="<?php echo base_url().'assets/img/howto.jpg';?>" class="img-fluid">
         </div>
-    </div>
+    </div> -->
 </div>
 <?php $this->load->view('menu/footer');?>
